@@ -50,10 +50,10 @@
 				class="rounded-full w-[120px] sm:w-[150px] mb-4 sm:mb-0"
 			/>
 		</div>
-		<div class="flex flex-row mt-4">
+		<div class="flex flex-row mt-4 flex-wrap">
 			{#each links as link}
 				<a
-					class="bg-black text-white px-4 py-2 rounded-xl mr-3"
+					class="bg-black text-white px-4 py-2 rounded-xl mr-3 mb-3"
 					target="_blank"
 					rel="noreferrer"
 					href={link.href}
