@@ -1,0 +1,39 @@
+---
+import Navbar from "../components/Navbar.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+
+		<meta name="author" content="Fachri Hawari<fachri.hawari@gmail.com>" />
+		<meta property="og:title" content="hawari.dev" />
+		<meta
+			property="og:description"
+			content="Personal site of ordinary Software Engineer"
+		/>
+		<meta property="og:url" content="https://hawari.dev" />
+		<meta property="og:image" content="https://hawari.dev/me-square.jpg" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="https://hawari.dev" />
+		<meta name="twitter:title" content="hawari.dev" />
+		<meta
+			name="twitter:description"
+			content="Personal site of ordinary Software Engineer"
+		/>
+		<meta name="twitter:image" content="https://hawari.dev/me-square.jpg" />
+		<meta name="twitter:creator" content="@fachrihawari" />
+	</head>
+	<body>
+		<Navbar />
+		<!-- Debug responsive bg-green-100 md:bg-red-100 sm:bg-yellow-100 lg:bg-white h-screen -->
+		<div class="max-w-5xl mx-auto p-6 md:pt-12">
+			<slot />
+		</div>
+	</body>
+</html>

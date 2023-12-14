@@ -1,0 +1,27 @@
+---
+import Icon from "astro-icon";
+---
+
+<header class="border-b">
+  <div
+    class="max-w-5xl px-6 py-3 mx-auto flex flex-row items-center justify-between"
+  >
+    <a href="/" class="text-3xl font-medium">
+      hawari.dev
+    </a>
+    <div class="flex gap-6">
+      <a href="/blog" class="flex items-center">
+        <Icon size={24} name="iconoir:book" /> 
+        <span class="ml-1 font-medium">
+          Blog
+        </span>
+      </a>
+      <a href="/projects" class="flex items-center">
+        <Icon size={24} name="iconoir:fire-flame" /> 
+        <span class="ml-1 font-medium">
+          Projects
+        </span>
+      </a>
+    </div>
+  </div>
+</header>

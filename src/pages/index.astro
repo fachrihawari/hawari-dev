@@ -1,16 +1,43 @@
 ---
-
+import { Image } from "astro:assets";
+import mePicture from "../assets/img/me.jpg";
+import MainLayout from "../layouts/MainLayout.astro";
+import PostCard from "../components/PostCard.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+	<div class="flex flex-col md:flex-row items-center md:justify-between">
+
+		<Image
+			class="rounded-xl max-h-72 md:max-h-max lg:max-w-md md:max-w-xs object-cover object-top"
+			src={mePicture}
+			alt="Fachri Hawari"
+		/>
+
+		<div class="py-8 sm:pt-16 md:pr-8 md:pl-16 lg:py-0 flex flex-col justify-center">
+			<h1 class="text-4xl font-bold">Hello, I'm Fachri.</h1>
+			<p class="mt-4">
+				I am a <strong>FullStack JavaScript Instructor</strong> at <u
+					>Hacktiv8</u
+				>.
+			</p>
+			<p class="mt-4">
+				I speak <u>JavaScript</u> & <u> TypeScript</u> and would love to share
+				my knowledge with others.
+			</p>
+			<p class="mt-4">
+				This website will serve as my <u>digital diary</u>, chronicling my
+				journey in the realm of technology.
+			</p>
+			<div class="mt-12">
+				<h2 class="font-light uppercase">Latest Posts</h2>
+				<div class="mt-4">
+					<PostCard />
+					<div class="sm:block md:hidden lg:block">
+						<PostCard />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</MainLayout>
