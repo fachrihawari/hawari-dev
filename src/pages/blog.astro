@@ -3,14 +3,14 @@ import { getCollection } from "astro:content";
 import MainLayout from "../layouts/MainLayout.astro";
 import PostCard from "../components/PostCard.astro";
 
-const allPosts = await getCollection("posts");
+const posts = await getCollection("posts");
 ---
 
 <MainLayout class="max-w-[65ch]">
   <h1 class="text-3xl font-bold">Blog</h1>
   <ul class="mt-4">
     {
-      allPosts.map((post) => (
+      posts.map((post) => (
         <li>
           <a href={`/posts/${post.slug}`}>
             <PostCard post={post} />

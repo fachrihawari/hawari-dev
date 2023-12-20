@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import MainLayout from "../layouts/MainLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const projects = await getCollection("projects");
+---
+
+<MainLayout class="max-w-[65ch]">
+  <h1 class="text-3xl font-bold">Projects</h1>
+  <ul class="mt-4">
+    {
+      projects.map((project) => (
+        <li>
+          <a href={project.data.link} target="_blank">
+            <ProjectCard project={project} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</MainLayout>
