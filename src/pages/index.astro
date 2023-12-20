@@ -1,25 +1,23 @@
 ---
 import { Image } from "astro:assets";
-import mePicture from "../assets/img/me.jpg";
+import mePicture from "../assets/img/me-square.jpg";
 import MainLayout from "../layouts/MainLayout.astro";
-import PostCard from "../components/PostCard.astro";
 ---
-
-<MainLayout>
-	<div class="flex flex-col md:flex-row items-center md:justify-between">
-
+<MainLayout class="h-[calc(100vh-65px)]">
+	<div class="flex flex-col w-full md:flex-row-reverse items-center md:justify-between">
 		<Image
-			class="rounded-xl max-h-72 md:max-h-max lg:max-w-md md:max-w-xs object-cover object-top"
+			class="rounded-full w-56 object-cover object-top"
 			src={mePicture}
 			alt="Fachri Hawari"
 		/>
 
-		<div class="py-8 sm:pt-16 md:pr-8 md:pl-16 lg:py-0 flex flex-col justify-center">
+		<div
+			class="py-8 sm:pt-12 md:pr-16 lg:py-0 flex flex-col justify-center"
+		>
 			<h1 class="text-4xl font-bold">Hello, I'm Fachri.</h1>
 			<p class="mt-4">
-				I am a <strong>FullStack JavaScript Instructor</strong> at <u
-					>Hacktiv8</u
-				>.
+				I am a <strong>FullStack JavaScript Instructor</strong> at
+				<u>Hacktiv8</u>.
 			</p>
 			<p class="mt-4">
 				I speak <u>JavaScript</u> & <u> TypeScript</u> and would love to share
@@ -29,15 +27,6 @@ import PostCard from "../components/PostCard.astro";
 				This website will serve as my <u>digital diary</u>, chronicling my
 				journey in the realm of technology.
 			</p>
-			<div class="mt-12">
-				<h2 class="font-light uppercase">Latest Posts</h2>
-				<div class="mt-4">
-					<PostCard />
-					<div class="sm:block md:hidden lg:block">
-						<PostCard />
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </MainLayout>

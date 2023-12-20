@@ -4,6 +4,7 @@
   "dependencies": {
     "@astrojs/check": "^0.3.2",
     "@astrojs/node": "^7.0.1",
+    "@astrojs/rss": "^4.0.1",
     "@astrojs/tailwind": "^5.0.3",
     "astro": "^4.0.4",
     "astro-icon": "^0.8.2",
@@ -18,5 +19,8 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10"
+  }
 }

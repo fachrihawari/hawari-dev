@@ -6,6 +6,7 @@ import node from "@astrojs/node";
 export default defineConfig({
   integrations: [tailwind()],
   output: "server",
+  site: "https://hawari.dev",
   adapter: node({
     mode: "standalone"
   })
