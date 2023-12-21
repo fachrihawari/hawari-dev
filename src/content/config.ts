@@ -14,10 +14,11 @@ const postsCollection = defineCollection({
 });
 
 const projectsCollection = defineCollection({
-    type: 'content',
+    type: 'data',
     schema: z.object({
       title: z.string(),
       description: z.string(),
+      publishedAt: z.date(),
       link: z.string(),
       tags: z.array(z.string())
     })

@@ -1,20 +1,11 @@
-# Astro Starter Kit: Minimal
-
-```sh
-npm create astro@latest -- --template minimal
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+# hawari.dev
 
 ## Todos
 
-[] Add more info on detail posts
-[] show tags on projects
-[] show tags on posts
+- [x] show tags on projects
+- [x] show tags on posts
+- [ ] Add more info on detail posts
+- [ ] tag filtering on posts
 
 
 ## 🚀 Project Structure
@@ -23,11 +14,44 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+.
+├── README.md
+├── astro.config.mjs
+├── bun.lockb
+├── ecosystem.config.cjs
+├── package.json
+├── public
+│   ├── favicon.svg
+│   └── me-square.jpg
+├── src
+│   ├── assets
+│   │   └── img
+│   │       ├── me-square.jpg
+│   │       └── me.jpg
+│   ├── components
+│   │   ├── Navbar.astro
+│   │   ├── PostCard.astro
+│   │   └── ProjectCard.astro
+│   ├── content
+│   │   ├── config.ts
+│   │   ├── posts
+│   │   │   ├── deploy-vite-to-vercel-using-cli.md
+│   │   │   └── markdown.md
+│   │   └── projects
+│   │       ├── bepph.yaml
+│   │       └── sechat.yaml
+│   ├── env.d.ts
+│   ├── layouts
+│   │   └── MainLayout.astro
+│   └── pages
+│       ├── blog.astro
+│       ├── index.astro
+│       ├── posts
+│       │   └── [...slug].astro
+│       ├── projects.astro
+│       └── rss.xml.ts
+├── tailwind.config.mjs
+└── tsconfig.json
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.

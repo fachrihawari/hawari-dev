@@ -1,8 +1,8 @@
 ---
 title: 'Markdown'
-description: 'This is the first post of my new Astro blog.'
-publishedAt: 2022-07-01
-tags: ["astro", "blogging", "learning in public"]
+description: 'This is an example full page with markdown'
+publishedAt: 2023-12-20
+tags: ["example", "blogging", "markdown"]
 ---
 
 # h1 Heading 8-)

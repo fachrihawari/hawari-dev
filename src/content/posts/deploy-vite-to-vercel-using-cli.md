@@ -1,7 +1,7 @@
 ---
 title: 'Deploy Vite to Vercel using CLI'
 description: 'This is the first post of my new Astro blog.'
-publishedAt: 2022-07-01
+publishedAt: 2023-12-21
 tags: ["astro", "blogging", "learning in public"]
 ---
 

@@ -1,17 +1,22 @@
 ---
 import { getCollection } from "astro:content";
+import orderBy from "lodash/orderBy";
 import MainLayout from "../layouts/MainLayout.astro";
 import PostCard from "../components/PostCard.astro";
 
-const posts = await getCollection("posts");
+// Prerender this page at build time
+export const prerender = true
+
+const rawPosts = await getCollection("posts")
+const posts = orderBy(rawPosts, ['data.publishedAt'], ['desc'])
 ---
 
 <MainLayout class="max-w-[65ch]">
   <h1 class="text-3xl font-bold">Blog</h1>
-  <ul class="mt-4">
+  <ul class="mt-6">
     {
       posts.map((post) => (
-        <li>
+        <li class="mb-3">
           <a href={`/posts/${post.slug}`}>
             <PostCard post={post} />
           </a>
