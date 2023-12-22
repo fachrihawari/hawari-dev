@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 import Navbar from "../components/Navbar.astro";
 ---
 
@@ -10,7 +10,10 @@ import Navbar from "../components/Navbar.astro";
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
-		<meta name="description" content="Personal site of ordinary Software Engineer" />
+		<meta
+			name="description"
+			content="Personal site of ordinary Software Engineer"
+		/>
 		<meta name="author" content="Fachri Hawari<fachri.hawari@gmail.com>" />
 		<meta property="og:title" content="hawari.dev" />
 		<meta
@@ -37,5 +40,7 @@ import Navbar from "../components/Navbar.astro";
 		<div class={`max-w-5xl mx-auto p-6 md:pt-12 ${Astro.props.class}`}>
 			<slot />
 		</div>
+
+		<slot name="script" />
 	</body>
 </html>

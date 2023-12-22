@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
 
 // Prerender this page at build time
-export const prerender = true
+export const prerender = true;
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("posts");
@@ -22,5 +22,24 @@ const { Content } = await entry.render();
   <article class="prose mx-auto">
     <h1 class="text-4xl">{entry.data.title}</h1>
     <Content />
+
+    <div class="h-6" />
+    <script
+      slot="script"
+      src="https://giscus.app/client.js"
+      data-repo="fachrihawari/hawari-dev"
+      data-repo-id="R_kgDOISSMkw"
+      data-category="Comments"
+      data-category-id="DIC_kwDOISSMk84Cb8Up"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async></script>
   </article>
 </MainLayout>
