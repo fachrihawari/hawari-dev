@@ -42,6 +42,15 @@ import Navbar from "../components/Navbar.astro";
 		</div>
 
 		<slot name="script" />
-		<script async src="https://umami.hawari.dev/script.js" data-website-id="ef524127-481b-4aa0-980f-0bb748562852"></script>
+		
+		{
+			import.meta.env.PROD && (
+				<script
+					async
+					src="https://umami.hawari.dev/script.js"
+					data-website-id="ef524127-481b-4aa0-980f-0bb748562852"
+				/>
+			)
+		}
 	</body>
 </html>
