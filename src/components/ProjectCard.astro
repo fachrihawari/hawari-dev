@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import Tags from "./Tags.astro";
 interface Props {
   project: CollectionEntry<"projects">;
 }
@@ -34,13 +35,5 @@ const { project } = Astro.props;
   <p class="mt-1">
     {project.data.description}
   </p>
-  <div class="flex flex-row gap-2 my-2 flex-wrap">
-    {
-      project.data.tags.map((tag) => (
-        <span class="bg-gray-950 text-white px-1 py-0.5 rounded-lg">
-          #{tag}
-        </span>
-      ))
-    }
-  </div>
+  <Tags tags={project.data.tags} classes="my-2" />
 </article>

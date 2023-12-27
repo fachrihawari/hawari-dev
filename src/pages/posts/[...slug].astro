@@ -20,7 +20,9 @@ const { Content } = await entry.render();
 
 <MainLayout frontmatter={entry.data}>
   <article class="prose mx-auto">
-    <h1 class="text-4xl">{entry.data.title}</h1>
+    <h1 transition:name={`post-title-${entry.data.title}`} class="text-4xl">
+      {entry.data.title}
+    </h1>
     <Content />
 
     <div class="h-6" />
