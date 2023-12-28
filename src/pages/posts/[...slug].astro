@@ -1,6 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
+import PageView from "../../components/PageView.svelte";
+import Icon from "astro-icon";
+import Tags from "../../components/Tags.astro";
 
 // Prerender this page at build time
 export const prerender = true;
@@ -19,13 +22,35 @@ const { Content } = await entry.render();
 ---
 
 <MainLayout frontmatter={entry.data}>
-  <article class="prose mx-auto">
-    <h1 transition:name={`post-title-${entry.data.title}`} class="text-4xl">
+  <div class="max-w-[65ch] mx-auto mb-8">
+    <h1 transition:name={`post-title-${entry.data.title}`} class="text-4xl mb-6">
       {entry.data.title}
     </h1>
+
+    <div class="flex items-center font-light mb-2">
+      <span class="flex items-center mr-2">
+        <Icon size={18} name="ion:calendar-outline" class="mr-1" />
+        {
+          new Intl.DateTimeFormat("en-US", {
+            dateStyle: "long",
+            timeZone: "Asia/Jakarta",
+          }).format(entry.data.publishedAt)
+        }
+      </span>
+      <PageView path={`/posts/${entry.slug}/`} client:load />
+    </div>
+
+    <Tags tags={entry.data.tags} />
+
+
+    <div class="w-full h-[2px] mt-6 bg-gray-100"></div>
+  </div>
+
+
+  <article class="prose mx-auto">
     <Content />
 
-    <div class="h-6" />
+    <div class="h-6"></div>
     <script
       slot="script"
       src="https://giscus.app/client.js"

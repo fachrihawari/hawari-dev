@@ -48,7 +48,7 @@ import Navbar from "../components/Navbar.astro";
 				<script
 					async
 					src="https://umami.hawari.dev/script.js"
-					data-website-id="ef524127-481b-4aa0-980f-0bb748562852"
+					data-website-id={import.meta.env.UMAMI_WEBSITE_ID}
 				/>
 			)
 		}

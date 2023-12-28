@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Tags from "./Tags.astro";
+import Icon from "astro-icon";
+import PageView from "./PageView.svelte";
 interface Props {
   post: CollectionEntry<"posts">;
 }
@@ -8,11 +10,30 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<article class="border px-4 py-2 rounded-xl hover:translate-x-3 ease-in-out duration-200">
-  <h3 transition:name={`post-title-${post.data.title}`} class="text-2xl font-medium">{post.data.title}</h3>
-  <p class="mt-1">
+<article
+  class="border px-4 py-2 rounded-xl hover:translate-x-3 ease-in-out duration-200 text-gray-600"
+>
+  <h3
+    transition:name={`post-title-${post.data.title}`}
+    class="text-2xl font-normal text-black"
+  >
+    {post.data.title}
+  </h3>
+  <p class="mt-1 font-light">
     {post.data.description}
   </p>
 
-  <Tags tags={post.data.tags} classes="my-2" />
+  <div class="mt-2 flex items-center font-light">
+    <span class="flex items-center mr-2">
+      <Icon size={18} name="ion:calendar-outline" class="mr-1" />
+      {
+        new Intl.DateTimeFormat("en-US", {
+          dateStyle: "long",
+          timeZone: "Asia/Jakarta",
+        }).format(post.data.publishedAt)
+      }
+    </span>
+    <PageView path={`/posts/${post.slug}/`} client:load />
+  </div>
+  <Tags tags={post.data.tags} classes="mt-1" />
 </article>

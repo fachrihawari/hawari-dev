@@ -4,8 +4,9 @@
 
 - [x] show tags on projects
 - [x] show tags on posts
-- [ ] Add more info on detail posts
+- [x] Add more info on detail posts
 - [ ] tag filtering on posts
+- [ ] fix seo on every page
 
 
 ## 🚀 Project Structure
