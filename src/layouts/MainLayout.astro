@@ -52,5 +52,10 @@ import Navbar from "../components/Navbar.astro";
 				/>
 			)
 		}
+		<script>
+			document.addEventListener("astro:after-swap", () => {
+				if (import.meta.env.PROD) umami.track();
+			});
+		</script>
 	</body>
 </html>

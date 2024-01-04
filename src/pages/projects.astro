@@ -1,14 +1,14 @@
 ---
 import { getCollection } from "astro:content";
-import orderBy from 'lodash/orderBy'
+import orderBy from "lodash/orderBy";
 import MainLayout from "../layouts/MainLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
 // Prerender this page at build time
-export const prerender = true
+export const prerender = true;
 
-const rawProjects = await getCollection("projects")
-const projects = orderBy(rawProjects, ['data.publishedAt'], ['desc'])
+const rawProjects = await getCollection("projects");
+const projects = orderBy(rawProjects, ["data.publishedAt"], ["desc"]);
 ---
 
 <MainLayout class="max-w-[65ch]">
@@ -17,7 +17,12 @@ const projects = orderBy(rawProjects, ['data.publishedAt'], ['desc'])
     {
       projects.map((project) => (
         <li class="mb-3">
-          <a href={project.data.link} target="_blank">
+          <a
+            href={project.data.link}
+            data-umami-event="project-card-click"
+            data-umami-event-id={project.id}
+            target="_blank"
+          >
             <ProjectCard project={project} />
           </a>
         </li>
