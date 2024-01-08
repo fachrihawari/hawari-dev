@@ -19,7 +19,7 @@ const projects = orderBy(rawProjects, ["data.publishedAt"], ["desc"]);
         <li class="mb-3">
           <a
             href={project.data.link}
-            data-umami-event="project-card-click"
+            data-umami-event="project-card"
             data-umami-event-id={project.id}
             target="_blank"
           >
