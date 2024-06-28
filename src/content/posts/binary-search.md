@@ -9,7 +9,7 @@ tags: ["algorithm"]
 
 Imagine you want to search a word in a dictionary, what will you do? open it from the first until you find the word? of course it will take a lot of time.
 
-Or maybe you will open it from the middle, if the word is in the left side, you will open the left side, if the word is in the right side, you will open the right side, and so on? this is more faster right?
+Or maybe you will open it from the middle. If the word is on the left side, you will open the left side; if the word is on the right side, you will open the right side, and so on. This is faster, right?
 
 The first method is called linear search or simple search, and the second method is what we call as binary search.
 
@@ -39,7 +39,7 @@ function linearSearch(list, target) {
 }
 ```
 
-In above example, if you have a list of 1000 and you want to search the last number, the loop will be executed 1000 times. 
+In the example above, if you have a list of 1000 items and you want to search for the last number, the loop will execute 1000 times.
 
 In Big O notation, the time complexity of linear search is O(n), where n is the number of elements in the list.
 
@@ -59,7 +59,7 @@ We will use JavaScript for the example.
     }
     ```
 
-2. Then we will implement the binary search algorithm by create 3 variables, `left`, `right`, and `middle`.
+2. Then we will implement the binary search algorithm by creating 3 variables: `left`, `right`, and `middle`.
 
     ```javascript
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -138,7 +138,7 @@ We will use JavaScript for the example.
     console.log(binarySearch(numbers, 5)); // 4
     ```
 
-In above example, if you have a list of 1000 and you want to search the last number, the loop will be executed 10 times. 
+In the example above, if you have a list of 1000 items and you want to search for the last number, the loop will execute 10 times.
 
 In Big O notation, the time complexity of binary search is O(log n), where n is the number of elements in the list.
 
