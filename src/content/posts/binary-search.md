@@ -151,7 +151,7 @@ you can try run:
 
 take a look at the terminal to see how many times the loop is executed for each search.
 
-<iframe style="width: 100%;height: 500px;" src="https://stackblitz.com/edit/hawari-dev-search-algo?embed=1&file=package.json&hideNavigation=1&theme=light&view=editor"></iframe>
+<iframe style="width: 100%;height: 500px;" src="https://stackblitz.com/edit/hawari-dev-search-algo?embed=1&file=package.json&hideNavigation=1&theme=light&view=editor&ctl=1"></iframe>
 
 
 ## Conclusion
