@@ -15,7 +15,13 @@ The first method is called linear search or simple search, and the second method
 
 There is a requirement to using a binary search, which is the list should be sorted, otherwise it will not work.
 
-## Example of Linear Search
+## Linear Search
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240506105158/Linear-Search-algorithm-banner-(1).webp" style="width: 100%; margin-bottom:0px;">
+<p style="text-align: center; margin-top:0px; margin-bottom: 40px;">source: <a target="_blank" href="https://www.geeksforgeeks.org/linear-search/">Geeks for Geeks - Linear Search</a></p>
+
+In Linear Search, we will check the value item by item starting from the first element until we find the target value.
+
+### Example Code
 
 Let's say we have an array of numbers and we want to search a number in the array. I will use JavaScript for the example.
 
@@ -45,7 +51,14 @@ In Big O notation, the time complexity of linear search is O(n), where n is the 
 
 Okay, now we understand how linear search works and how long it will take to search a number in a list. Let's move to the binary search.
 
-## Example of Binary Search
+## Binary Search
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240506155201/binnary-search-.webp" style="width: 100%; margin-bottom:0px;">
+<p style="text-align: center; margin-top:0px; margin-bottom: 40px;">source: <a target="_blank" href="https://www.geeksforgeeks.org/binary-search/">Geeks for Geeks - Binary Search</a></p>
+
+In Binary Search, we will check the middle value of the list. If the target value is less than the middle value, we will search in the left side of the middle value, otherwise we will search in the right side of the middle value.
+
+### Example Code
 
 We will use JavaScript for the example.
 
@@ -165,8 +178,8 @@ That's all about binary search, I hope you understand how it works and how to im
 
 ## Credits
 
-Thanks to [Indonesia Belajar](https://www.youtube.com/@belajaridn) for such a great explanation about [Data Structure and Algorithm](https://youtube.com/playlist?list=PL2O3HdJI4voEOEB5ecXtCTayzXSB8b3KZ&si=O-zaqLJSXKu9XS13).
-
-If you guys are Indonesian, I recommend you to watch their videos, they have a lot of great content about programming and computer science. 
+- Thanks to <a href="https://www.youtube.com/@belajaridn" target="_blank">Indonesia Belajar</a> for such a great explanation about <a href="https://youtube.com/playlist?list=PL2O3HdJI4voEOEB5ecXtCTayzXSB8b3KZ&amp;si=O-zaqLJSXKu9XS13" target="_blank">Data Structure and Algorithm</a>.
+- Thanks to <a href="https://www.geeksforgeeks.org/" target="_blank">Geeks for Geeks</a> for the images.
+- Thanks to Github Copilot 🤖 also.
 
 Happy coding! 🚀
