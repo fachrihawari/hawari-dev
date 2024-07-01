@@ -21,7 +21,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<MainLayout frontmatter={entry.data}>
+<MainLayout>
   <div class="max-w-[65ch] mx-auto mb-8">
     <h1 
      class="text-4xl mb-6">
