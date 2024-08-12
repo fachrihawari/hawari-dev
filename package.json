@@ -25,10 +25,11 @@
   "type": "module",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "@types/bun": "^1.1.6",
     "@types/lodash": "^4.14.202",
     "@types/umami": "^0.1.5"
   },
   "trustedDependencies": [
-     "sharp"
+    "sharp"
   ]
 }
