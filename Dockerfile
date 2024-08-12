@@ -1,7 +1,7 @@
 # Use the official Bun image as the base
-FROM oven/bun:1.1.22
+FROM oven/bun:1.1.22-alpine
 
-ARG PORT=3000
+ENV PORT=3000
 
 # Set the working directory
 WORKDIR /app
@@ -22,4 +22,4 @@ RUN bun run build
 EXPOSE $PORT
 
 # Start the Astro development server
-CMD PORT=$PORT bun run ./server/entry.mjs
+CMD bun run ./dist/server/entry.mjs
