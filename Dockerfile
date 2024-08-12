@@ -12,11 +12,11 @@ COPY package*.json ./
 # Install dependencies
 RUN bun install
 
+# Copy the rest of the application code
+COPY . .
+
 # Build the project
 RUN bun run build
-
-# Copy the rest of the application code
-COPY ./dist ./
 
 # Expose the development server port
 EXPOSE $PORT
