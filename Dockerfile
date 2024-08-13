@@ -7,7 +7,7 @@ ENV PORT=3000
 WORKDIR /app
 
 # Add curl for healthcheck
-RUN apt-get install curl
+RUN apt-get update && apt-get install curl -y
 
 # Copy package.json and bun.lockb for faster installs
 COPY package*.json ./
