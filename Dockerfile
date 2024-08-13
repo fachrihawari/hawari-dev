@@ -1,5 +1,5 @@
 # Use the official Bun image as the base
-FROM oven/bun:1.1.22-slim
+FROM oven/bun:1.1.22
 
 ENV PORT=3000
 
