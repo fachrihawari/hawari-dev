@@ -1,13 +1,10 @@
 # Use the official Bun image as the base
-FROM oven/bun:1.1.22
+FROM oven/bun:1.1.22-slim
 
 ENV PORT=3000
 
 # Set the working directory
 WORKDIR /app
-
-# Add curl for healthcheck
-RUN apt-get update && apt-get install curl -y
 
 # Copy package.json and bun.lockb for faster installs
 COPY package*.json ./
