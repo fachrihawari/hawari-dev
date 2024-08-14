@@ -6,7 +6,7 @@ ENV PORT=3000
 # Set the working directory
 WORKDIR /app
 
-RUN ping google.com
+RUN apt-get update
 
 # Copy package.json and bun.lockb for faster installs
 COPY package*.json ./
