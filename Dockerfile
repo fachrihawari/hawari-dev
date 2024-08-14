@@ -6,6 +6,8 @@ ENV PORT=3000
 # Set the working directory
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y curl
+
 # Copy package.json and bun.lockb for faster installs
 COPY package*.json ./
 
