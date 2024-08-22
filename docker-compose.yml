@@ -1,0 +1,28 @@
+services:
+  web:
+    build: .
+    restart: always
+    expose:
+      - ${PORT}
+    environment:
+      PORT: ${PORT}
+      UMAMI_ENDPOINT: ${UMAMI_ENDPOINT}
+      UMAMI_USERNAME: ${UMAMI_USERNAME}
+      UMAMI_PASSWORD: ${UMAMI_PASSWORD}
+      UMAMI_WEBSITE_ID: ${UMAMI_WEBSITE_ID}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.hawari-dev.rule=Host(`hawari.dev`)"
+      - "traefik.http.routers.hawari-dev.entrypoints=web"
+      - "traefik.http.services.hawari-dev.loadbalancer.server.port=${PORT}"
+    healthcheck:
+      test: ["CMD-SHELL", "curl http://localhost:${PORT}/api/heartbeat"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - traefik-network
+
+networks:
+  traefik-network:
+    external: true
