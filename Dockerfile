@@ -6,6 +6,9 @@ ENV PORT=3000
 # Set the working directory
 WORKDIR /app
 
+# add curl
+apk update && apk add curl
+
 # Copy package.json and bun.lockb for faster installs
 COPY package*.json ./
 
