@@ -12,9 +12,9 @@ services:
       UMAMI_WEBSITE_ID: ${UMAMI_WEBSITE_ID}
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.hawari-dev.rule=Host(`hawari.dev`)"
-      - "traefik.http.routers.hawari-dev.entrypoints=web"
-      - "traefik.http.services.hawari-dev.loadbalancer.server.port=${PORT}"
+      - "traefik.http.routers.hawari_dev.rule=Host(`hawari.dev`)"
+      - "traefik.http.routers.hawari_dev.entrypoints=web"
+      - "traefik.http.services.hawari_dev.loadbalancer.server.port=${PORT}"
     healthcheck:
       test: ["CMD-SHELL", "curl http://localhost:${PORT}/api/heartbeat"]
       interval: 5s
