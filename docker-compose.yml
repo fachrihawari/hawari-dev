@@ -16,7 +16,7 @@ services:
       - "traefik.http.routers.hawari_dev.entrypoints=web"
       - "traefik.http.services.hawari_dev.loadbalancer.server.port=${PORT}"
     healthcheck:
-      test: ["CMD-SHELL", "curl http://localhost:${PORT}/api/heartbeat"]
+      test: ["CMD-SHELL", "curl http://127.0.0.1:${PORT}/api/heartbeat"]
       interval: 5s
       timeout: 5s
       retries: 5
