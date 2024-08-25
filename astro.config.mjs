@@ -11,6 +11,10 @@ export default defineConfig({
   image: {
     service: squooshImageService(),
   },
+  server: {
+    host: true, // have to set host to tell astro expose it to LAN
+    port: Number(import.meta.env.PORT || 4321)
+  },
   adapter: node({
     mode: "standalone",
   }),
