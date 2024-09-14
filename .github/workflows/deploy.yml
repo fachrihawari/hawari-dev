@@ -12,7 +12,7 @@ jobs:
       # ssh into the server
       - name: SSH into server
         run: |
-          ssh -o StrictHostKeyChecking=no deploy@192.168.100.4 << 'EOF'
+          ssh -o StrictHostKeyChecking=no root@192.168.100.4 << 'EOF'
           cd /root/apps/hawari-dev
           git restore .
           git pull origin main
