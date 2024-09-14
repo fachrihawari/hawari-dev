@@ -5,7 +5,9 @@ publishedAt: 2023-12-20
 tags: ["example", "blogging", "markdown"]
 ---
 
-ini markdown  
+ini markdown
+
+edited: deployed using self-hosted github actions runner
 
 # h1 Heading 8-)
 ## h2 Heading
