@@ -3,12 +3,14 @@ import { Image } from "astro:assets";
 import mePicture from "../assets/img/me-square.jpg";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
-<MainLayout class="h-[calc(100vh-65px)]">
+<MainLayout title="Home" description="Personal site of Fachri Hawari, a FullStack JavaScript Instructor at Hacktiv8" class="h-[calc(100vh-65px)]">
 	<div class="flex flex-col w-full md:flex-row-reverse items-center md:justify-between">
 		<Image
 			class="rounded-full mt-16 sm:mt-auto w-56 object-cover object-top"
 			src={mePicture}
 			alt="Fachri Hawari"
+			width={224}
+			height={224}
 		/>
 
 		<div

@@ -2,20 +2,22 @@ import { defineConfig, squooshImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import node from "@astrojs/node";
 import svelte from "@astrojs/svelte";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://hawari.dev",
-  integrations: [tailwind(), svelte()],
+  integrations: [tailwind(), svelte(), sitemap()],
   output: "server",
   image: {
-    service: squooshImageService(),
+    service: squooshImageService()
   },
   server: {
-    host: true, // have to set host to tell astro expose it to LAN
+    host: true,
+    // have to set host to tell astro expose it to LAN
     port: Number(import.meta.env.PORT || 4321)
   },
   adapter: node({
-    mode: "standalone",
-  }),
+    mode: "standalone"
+  })
 });

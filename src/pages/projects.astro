@@ -11,7 +11,11 @@ const rawProjects = await getCollection("projects");
 const projects = orderBy(rawProjects, ["data.publishedAt"], ["desc"]);
 ---
 
-<MainLayout class="max-w-[65ch]">
+<MainLayout
+  title="Projects"
+  description="Explore projects developed by Fachri Hawari, including web applications and tools"
+  class="max-w-[65ch]"
+>
   <h1 class="text-3xl font-bold">Projects</h1>
   <ul class="mt-6">
     {

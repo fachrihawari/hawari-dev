@@ -11,7 +11,7 @@ const rawPosts = await getCollection("posts");
 const posts = orderBy(rawPosts, ["data.publishedAt"], ["desc"]);
 ---
 
-<MainLayout class="max-w-[65ch]">
+<MainLayout title="Blog" description="Read articles about JavaScript, TypeScript, and web development by Fachri Hawari" class="max-w-[65ch]">
   <h1 class="text-3xl font-medium">Blog</h1>
   <ul class="mt-6">
     {

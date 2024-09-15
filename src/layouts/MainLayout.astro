@@ -3,9 +3,16 @@ import Navbar from "../components/Navbar.astro";
 
 interface Props {
 	class?: string;
+	title?: string;
+	description?: string;
 }
 
 const { class: className } = Astro.props
+const domain = "hawari.dev"
+const url = "https://hawari.dev"
+const pathname = Astro.url.pathname
+const seoTitle = Astro.props.title ? `${Astro.props.title} | ${domain}` : domain
+const seoDescription = Astro.props.description || "Personal site of Fachri Hawari, a FullStack JavaScript Instructor at Hacktiv8"
 ---
 
 <html lang="en">
@@ -14,29 +21,35 @@ const { class: className } = Astro.props
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<title>hawari.dev</title>
+		<title>{seoTitle}</title>
+
 		<meta
 			name="description"
-			content="Personal site of ordinary Software Engineer"
+			content={seoDescription}
 		/>
 		<meta name="author" content="Fachri Hawari<fachri.hawari@gmail.com>" />
-		<meta property="og:title" content="hawari.dev" />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={seoTitle} />
 		<meta
 			property="og:description"
-			content="Personal site of ordinary Software Engineer"
+			content={seoDescription}
 		/>
-		<meta property="og:url" content="https://hawari.dev" />
-		<meta property="og:image" content="https://hawari.dev/me-square.jpg" />
+		<meta property="og:url" content={url} />
+		<meta property="og:image" content={`${url}/me-square.jpg`} />
 		<meta property="og:type" content="website" />
+
+		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="https://hawari.dev" />
-		<meta name="twitter:title" content="hawari.dev" />
+		<meta name="twitter:title" content={seoTitle} />
 		<meta
 			name="twitter:description"
-			content="Personal site of ordinary Software Engineer"
+			content={seoDescription}
 		/>
-		<meta name="twitter:image" content="https://hawari.dev/me-square.jpg" />
+		<meta name="twitter:image" content={`${url}/me-square.jpg`} />
 		<meta name="twitter:creator" content="@fachrihawari" />
+		<meta name="twitter:site" content="@fachrihawari" />
+		<link rel="canonical" href={`${url}${pathname}`} />
 	</head>
 	<body>
 		<Navbar />
