@@ -1,6 +1,6 @@
 ---
-title: 'Deploy to Vercel using the cli'
-description: 'We gonna learn to deploy vite using the vercel cli'
+title: 'Deploy to Vercel using the CLI'
+description: 'We gonna learn to deploy vite using the vercel CLI'
 publishedAt: 2023-12-23
 tags: ["vite", "vercel"]
 ---
@@ -15,7 +15,7 @@ Hola, this is my first post, we gonna learn how to deploy using the vercel cli, 
 
 ## Install the vercel cli
 
-Let's install the vercel cli, you can change the npm with your preferred one 
+Let's install the vercel cli, you can change the npm with your preferred one
 
 ```bash
 ➜  npm i -g vercel
@@ -24,7 +24,7 @@ Let's install the vercel cli, you can change the npm with your preferred one
 ## Login to the vercel cli
 
 1. Now, we have to login to our vercel account
-    
+
     ```bash
     ➜  vercel
     ```
@@ -33,14 +33,14 @@ Let's install the vercel cli, you can change the npm with your preferred one
     ```bash
     Vercel CLI 32.5.3
     > > No existing credentials found. Please log in:
-    ? Log in to Vercel 
-    ● Continue with GitHub 
-    ○ Continue with GitLab 
-    ○ Continue with Bitbucket 
-    ○ Continue with Email 
-    ○ Continue with SAML Single Sign-On 
+    ? Log in to Vercel
+    ● Continue with GitHub
+    ○ Continue with GitLab
+    ○ Continue with Bitbucket
+    ○ Continue with Email
+    ○ Continue with SAML Single Sign-On
       ─────────────────────────────────
-    ○ Cancel 
+    ○ Cancel
     ```
 
 3. I choose GitHub and follow the login instructions
@@ -69,7 +69,7 @@ I have initiate a simple vite project, now we can use that project to deploy to 
     ```bash
     ➜  vercel
     ```
-    
+
     ```bash
     Vercel CLI 32.5.3
     ? Set up and deploy “~/vite-project”? [Y/n] y
