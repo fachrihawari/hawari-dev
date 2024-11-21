@@ -14,6 +14,7 @@ export class UmamiApiClient {
   }
 
   async retriveAuthToken() {
+    return
     const resUser = await fetch(this.endpoint + `/auth/login`, {
       method: "POST",
       headers: {
@@ -30,12 +31,13 @@ export class UmamiApiClient {
   }
 
   async getPageView(path: string): Promise<number> {
-    const url = new URL(this.endpoint + `/websites/${this.websiteId}/metrics`)   
+    return 0
+    const url = new URL(this.endpoint + `/websites/${this.websiteId}/metrics`)
 
     url.searchParams.append('startAt', new Date("2023").getTime().toString())
     url.searchParams.append('endAt', new Date().getTime().toString())
     url.searchParams.append('type', 'url')
-    url.searchParams.append('url', path) 
+    url.searchParams.append('url', path)
     const res = await fetch(url.toString(), {
       headers: {
         'Authorization': `Bearer ${this.authToken}`
