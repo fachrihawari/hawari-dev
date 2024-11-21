@@ -59,15 +59,5 @@ const seoDescription = Astro.props.description || "Personal site of Fachri Hawar
 		</div>
 
 		<slot name="script" />
-
-		{
-			import.meta.env.PROD && (
-				<script
-					async
-					src="https://umami.hawari.dev/script.js"
-					data-website-id={import.meta.env.UMAMI_WEBSITE_ID}
-				/>
-			)
-		}
 	</body>
 </html>
