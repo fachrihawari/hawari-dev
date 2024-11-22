@@ -1,9 +1,13 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  export let path: string;
-  let views = 0;
-  let loading = true;
+  interface Props {
+    path: string
+  }
+
+	let { path } = $props();
+  let views = $state(0);
+  let loading = $state(false);
 
   onMount(async () => {
     const res = await fetch(`/api/pageviews?path=${path}`);

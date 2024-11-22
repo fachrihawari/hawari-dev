@@ -1,4 +1,4 @@
-import { defineConfig, squooshImageService } from "astro/config";
+import { defineConfig, sharpImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import node from "@astrojs/node";
 import svelte from "@astrojs/svelte";
@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [tailwind(), svelte(), sitemap()],
   output: "server",
   image: {
-    service: squooshImageService()
+    service: sharpImageService()
   },
   server: {
     host: true,
