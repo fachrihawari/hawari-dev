@@ -1,26 +1,23 @@
 // Import utilities from `astro:content`
 import { z, defineCollection } from "astro:content";
 
+const BaseSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  publishedAt: z.date(),
+  tags: z.array(z.string())
+})
 
 // Define a `type` and `schema` for each collection
 const postsCollection = defineCollection({
     type: 'content',
-    schema: z.object({
-      title: z.string(),
-      description: z.string(),
-      publishedAt: z.date(),
-      tags: z.array(z.string())
-    })
+    schema: BaseSchema
 });
 
 const projectsCollection = defineCollection({
     type: 'data',
-    schema: z.object({
-      title: z.string(),
-      description: z.string(),
-      publishedAt: z.date(),
+    schema: BaseSchema.extend({
       link: z.string(),
-      tags: z.array(z.string())
     })
 });
 

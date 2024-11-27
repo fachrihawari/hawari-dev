@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import orderBy from "lodash/orderBy";
 import MainLayout from "../layouts/MainLayout.astro";
-import PostCard from "../components/PostCard.astro";
+import Card from "../components/Card.astro";
 
 // Prerender this page at build time
 export const prerender = true;
@@ -18,7 +18,7 @@ const posts = orderBy(rawPosts, ["data.publishedAt"], ["desc"]);
       posts.map((post) => (
         <li class="mb-4">
           <a href={`/posts/${post.slug}`}>
-            <PostCard post={post} />
+            <Card entry={post} />
           </a>
         </li>
       ))

@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import orderBy from "lodash/orderBy";
 import MainLayout from "../layouts/MainLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import Card from "../components/Card.astro";
 
 // Prerender this page at build time
 export const prerender = true;
@@ -16,16 +16,16 @@ const projects = orderBy(rawProjects, ["data.publishedAt"], ["desc"]);
   description="Explore projects developed by Fachri Hawari, including web applications and tools"
   class="max-w-[65ch]"
 >
-  <h1 class="text-3xl font-bold">Projects</h1>
+  <h1 class="text-3xl font-medium">Projects</h1>
   <ul class="mt-6">
     {
       projects.map((project) => (
-        <li class="mb-3">
+        <li class="mb-4">
           <a
             href={project.data.link}
             target="_blank"
           >
-            <ProjectCard project={project} />
+            <Card entry={project} />
           </a>
         </li>
       ))
