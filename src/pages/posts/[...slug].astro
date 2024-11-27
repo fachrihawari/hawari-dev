@@ -23,8 +23,7 @@ const { Content } = await entry.render();
 
 <MainLayout title={entry.data.title} description={entry.data.description}>
   <div class="max-w-[65ch] mx-auto mb-8">
-    <h1
-     class="text-4xl mb-6">
+    <h1 class="text-4xl mb-6">
       {entry.data.title}
     </h1>
 
@@ -43,16 +42,15 @@ const { Content } = await entry.render();
 
     <Tags tags={entry.data.tags} />
 
-
     <div class="w-full h-[2px] mt-6 bg-gray-100"></div>
   </div>
-
 
   <article class="prose mx-auto">
     <Content />
 
     <div class="h-6"></div>
     <script
+      is:inline
       slot="script"
       src="https://giscus.app/client.js"
       data-repo="fachrihawari/hawari-dev"
@@ -72,30 +70,34 @@ const { Content } = await entry.render();
   </article>
 </MainLayout>
 
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": entry.data.title,
-  "datePublished": entry.data.publishedAt.toISOString(),
-  "dateModified": entry.data.publishedAt.toISOString(),
-  "author": {
-    "@type": "Person",
-    "name": "Fachri Hawari",
-    "url": "https://hawari.dev",
-    "sameAs": [
-      "https://twitter.com/fachrihawari",
-      "https://github.com/fachrihawari",
-      "https://linkedin.com/in/fachrihawari",
-    ],
-    "image": "https://hawari.dev/me-square.jpg",
-    "jobTitle": "FullStack JavaScript Instructor",
-    "worksFor": "Hacktiv8"
-  },
-  "description": entry.data.description,
-  "inLanguage": "en-US",
-  "keywords": entry.data.tags.join(","),
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": `https://hawari.dev/posts/${entry.slug}/`
-  }
-})} />
+<script
+  is:inline
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: entry.data.title,
+    datePublished: entry.data.publishedAt.toISOString(),
+    dateModified: entry.data.publishedAt.toISOString(),
+    author: {
+      "@type": "Person",
+      name: "Fachri Hawari",
+      url: "https://hawari.dev",
+      sameAs: [
+        "https://twitter.com/fachrihawari",
+        "https://github.com/fachrihawari",
+        "https://linkedin.com/in/fachrihawari",
+      ],
+      image: "https://hawari.dev/me-square.jpg",
+      jobTitle: "FullStack JavaScript Instructor",
+      worksFor: "Hacktiv8",
+    },
+    description: entry.data.description,
+    inLanguage: "en-US",
+    keywords: entry.data.tags.join(","),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://hawari.dev/posts/${entry.slug}/`,
+    },
+  })}
+/>

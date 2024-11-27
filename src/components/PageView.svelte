@@ -17,7 +17,6 @@
     for (let i = 0; i < data; i++) {
       views = i + 1;
       await new Promise((resolve) => setTimeout(resolve, 5));
-      console.log(views);
     }
   });
 </script>

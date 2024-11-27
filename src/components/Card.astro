@@ -1,10 +1,11 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Tags from "./Tags.astro";
+import PageView from "./PageView.svelte";
 import Icon from "astro-icon";
 
 interface Props {
-  entry: CollectionEntry<"posts" | "projects">;
+  entry: CollectionEntry<"projects" | "posts">
 }
 
 const { data } = Astro.props.entry;
@@ -29,7 +30,8 @@ const { data } = Astro.props.entry;
         }).format(data.publishedAt)
       }
     </span>
+
+    <PageView />
   </div>
   <Tags tags={data.tags} classes="mt-2" />
-
 </article>

@@ -15,7 +15,7 @@ const postsCollection = defineCollection({
 });
 
 const projectsCollection = defineCollection({
-    type: 'data',
+    type: 'content',
     schema: BaseSchema.extend({
       link: z.string(),
     })

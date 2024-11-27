@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 
 
-export const GET: APIRoute = async ({ url }) => {
+export const GET: APIRoute = async ({  }) => {
   return Response.json(100)
 }
