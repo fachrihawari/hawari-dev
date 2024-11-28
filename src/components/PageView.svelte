@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { getPageviewMeta } from "../helpers/pageview";
 
   interface Props {
     path: string
@@ -10,11 +11,16 @@
   let loading = $state(false);
 
   onMount(async () => {
-    const res = await fetch(`/api/pageviews?path=${path}`);
-    const data: number = await res.json();
+    const { hostname, slug } = getPageviewMeta(location.origin + path)
+    const res = await fetch(`https://api.counterapi.dev/v1/${hostname}/${slug}`);
+
+    if (!res.ok) return
+
+    const { count } = await res.json() as { count: number };
+
     loading = false;
 
-    for (let i = 0; i < data; i++) {
+    for (let i = 0; i < count; i++) {
       views = i + 1;
       await new Promise((resolve) => setTimeout(resolve, 5));
     }

@@ -6,9 +6,11 @@ import Icon from "astro-icon";
 
 interface Props {
   entry: CollectionEntry<"projects" | "posts">
+  path: string
 }
 
-const { data } = Astro.props.entry;
+const { path, entry } = Astro.props
+const { data } = entry;
 ---
 
 <article
@@ -31,7 +33,7 @@ const { data } = Astro.props.entry;
       }
     </span>
 
-    <PageView />
+    <PageView client:load path={path} />
   </div>
   <Tags tags={data.tags} classes="mt-2" />
 </article>

@@ -18,7 +18,7 @@ const posts = orderBy(rawPosts, ["data.publishedAt"], ["desc"]);
       posts.map((post) => (
         <li class="mb-4">
           <a href={`/posts/${post.slug}`}>
-            <Card entry={post} />
+            <Card entry={post} path={`/posts/${post.slug}`} />
           </a>
         </li>
       ))
