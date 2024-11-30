@@ -7,9 +7,8 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   const { hostname, slug } = getPageviewMeta(context.url)
   if (slug) {
-    fetch(`https://county.hawari.dev/api/count/up?namespace=${hostname}&key=${slug}`, { method: 'POST' }).then(r => {
-      console.log("pageview slug:", slug, r.ok ? 'OK' : 'ERROR')
-    })
+    fetch(`https://county.hawari.dev/api/count/up?namespace=${hostname}&key=${slug}`, { method: 'POST' })
+      .catch(err => console.error("Update counter error", err))
   }
 
   return response
