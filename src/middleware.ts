@@ -7,7 +7,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   const { hostname, slug } = getPageviewMeta(context.url)
   if (slug) {
-    fetch(`https://api.counterapi.dev/v1/${hostname}/${slug}/up`).then(r => {
+    fetch(`https://county.hawari.dev/api/count/up?namespace=${hostname}&key=${slug}`, { method: 'POST' }).then(r => {
       console.log("pageview slug:", slug, r.ok ? 'OK' : 'ERROR')
     })
   }

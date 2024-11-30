@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { getPageviewMeta } from "../helpers/pageview";
 
   interface Props {
     path: string
@@ -11,8 +10,7 @@
   let loading = $state(false);
 
   onMount(async () => {
-    const { hostname, slug } = getPageviewMeta(location.origin + path)
-    const res = await fetch(`https://api.counterapi.dev/v1/${hostname}/${slug}`);
+    const res = await fetch(`/api/pageview?path=${path}`);
 
     if (!res.ok) return
 
