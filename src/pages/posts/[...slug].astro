@@ -21,6 +21,12 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
+<script>
+  await fetch("/api/pageview?path=" + location.pathname, {
+    method: "POST",
+  });
+</script>
+
 <MainLayout title={entry.data.title} description={entry.data.description}>
   <div class="max-w-[65ch] mx-auto mb-8">
     <h1 class="text-4xl mb-6">

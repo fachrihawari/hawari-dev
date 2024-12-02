@@ -3,7 +3,14 @@ import { getPageviewMeta } from "../../helpers/pageview";
 
 export const GET: APIRoute = async ({ request }) => {
   const { origin, searchParams } = new URL(request.url)
-  const { hostname, slug } = getPageviewMeta(`${origin}${searchParams.get('path')}`) 
+  const { hostname, slug } = getPageviewMeta(`${origin}${searchParams.get('path')}`)
   const res = await fetch(`https://county.hawari.dev/api/count/?namespace=${hostname}&key=${slug}`)
   return Response.json(await res.json(), { status: res.status });
 };
+
+export const POST: APIRoute = async ({ request }) => {
+  const { origin, searchParams } = new URL(request.url)
+  const { hostname, slug } = getPageviewMeta(`${origin}${searchParams.get('path')}`)
+  const res = await fetch(`https://county.hawari.dev/api/count/up/?namespace=${hostname}&key=${slug}`, { method: 'POST' })
+  return Response.json(await res.json(), { status: res.status });
+}
