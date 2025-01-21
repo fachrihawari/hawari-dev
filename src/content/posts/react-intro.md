@@ -82,7 +82,7 @@ bisa pakai className, tp jangan lupa import file css-nya diatas
 
 contoh:
 
-```javascriptx
+```javascript
 // Menggunakan className attribute
 <h1 className="title">Hedy Lamarr's Todos</h1>
 
@@ -96,7 +96,7 @@ contoh:
 
 kita bisa menggunakan escape hatches `{}` untuk menampilkan data yg kita punya dari variable ke dalam jsx contoh:
 
-```javascriptx
+```javascript
 const user = {
   name: "Akbar",
   imageUrl:
