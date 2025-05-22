@@ -9,8 +9,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.hawari.rule=Host(`hawari.dev`)"
-      - "traefik.http.routers.hawari.entrypoints=websecure"
-      - "traefik.http.routers.hawari.tls.certresolver=letsencryptresolver"
+      - "traefik.http.routers.hawari.entrypoints=web"
       - "traefik.http.services.hawari.loadbalancer.server.port=${PORT}"
     healthcheck:
       test: ["CMD-SHELL", "curl http://localhost:${PORT}/api/heartbeat"]
