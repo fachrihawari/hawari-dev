@@ -9,7 +9,7 @@ import Tags from "../../components/Tags.astro";
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("posts");
+  const blogEntries = await getCollection("projects");
 
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
@@ -47,6 +47,45 @@ const { Content } = await entry.render();
     </div>
 
     <Tags tags={entry.data.tags} />
+
+    <!-- Project Links -->
+    <div class="mt-6 mb-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a 
+          href={entry.data.link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group flex items-center justify-center sm:justify-start gap-2 sm:gap-3 px-3 sm:px-4 py-3 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600"
+        >
+          <Icon 
+            size={20} 
+            name="iconoir:open-new-window" 
+            class="text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+          />
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">
+            View Project
+          </span>
+        </a>
+        
+        {entry.data.github && (
+          <a 
+            href={entry.data.github} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="group flex items-center justify-center sm:justify-start gap-2 sm:gap-3 px-3 sm:px-4 py-3 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600"
+          >
+            <Icon 
+              size={20} 
+              name="iconoir:github" 
+              class="text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+            />
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">
+              GitHub Repo
+            </span>
+          </a>
+        )}
+      </div>
+    </div>
 
     <div class="w-full h-[2px] mt-6 bg-gray-100"></div>
   </div>

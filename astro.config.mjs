@@ -3,11 +3,12 @@ import tailwind from "@astrojs/tailwind";
 import node from "@astrojs/node";
 import svelte from "@astrojs/svelte";
 import sitemap from "@astrojs/sitemap";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://hawari.dev",
-  integrations: [tailwind(), svelte(), sitemap()],
+  integrations: [tailwind(), svelte(), sitemap(), icon()],
   output: "server",
   image: {
     service: sharpImageService()

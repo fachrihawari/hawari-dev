@@ -11,20 +11,6 @@ const rawProjects = await getCollection("projects");
 const projects = orderBy(rawProjects, ["data.publishedAt"], ["desc"]);
 ---
 
-<script>
-  const projectElements = document.querySelectorAll("a.project");
-
-  projectElements.forEach((projectElement) => {
-    const path = projectElement.getAttribute("data-path");
-
-    projectElement.addEventListener("click", () => {
-      fetch("/api/pageview?path=" + path, {
-        method: "POST",
-      });
-    });
-  });
-</script>
-
 <MainLayout
   title="Projects"
   description="Explore projects developed by Fachri Hawari, including web applications and tools"
@@ -35,12 +21,7 @@ const projects = orderBy(rawProjects, ["data.publishedAt"], ["desc"]);
     {
       projects.map((project) => (
         <li class="mb-4">
-          <a
-            href={project.data.link}
-            class="project"
-            target="_blank"
-            data-path={`/projects/${project.slug}`}
-          >
+          <a href={`/projects/${project.slug}`}>
             <Card entry={project} path={`/projects/${project.slug}`} />
           </a>
         </li>

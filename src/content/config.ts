@@ -18,6 +18,7 @@ const projectsCollection = defineCollection({
     type: 'content',
     schema: BaseSchema.extend({
       link: z.string(),
+      github: z.string().optional(),
     })
 });
 
