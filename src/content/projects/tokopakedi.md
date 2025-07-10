@@ -23,7 +23,7 @@ Standard e-commerce stuff - you can browse products, filter by category and pric
 - **Midtrans** - payment processing (Indonesian payment gateway) 💳
 - **TypeScript** - type safety
 - **Google OAuth** - login option
-- **Bun** - runtime instead of Node.js 🚀
+- **Bun** - runtime & fast package manager
 
 ## Key features ✨
 
