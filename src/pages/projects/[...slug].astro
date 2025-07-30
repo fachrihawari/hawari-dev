@@ -43,7 +43,7 @@ const { Content } = await entry.render();
           }).format(entry.data.publishedAt)
         }
       </span>
-      <PageView path={`/posts/${entry.slug}/`} client:load />
+      <PageView path={`/projects/${entry.slug}/`} client:load />
     </div>
 
     <Tags tags={entry.data.tags} />
@@ -142,7 +142,7 @@ const { Content } = await entry.render();
     keywords: entry.data.tags.join(","),
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://hawari.dev/posts/${entry.slug}/`,
+      "@id": `https://hawari.dev/projects/${entry.slug}/`,
     },
   })}
 />
