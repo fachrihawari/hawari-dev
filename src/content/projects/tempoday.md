@@ -4,7 +4,7 @@ description: 'A local-first productivity app that organizes your life by date.'
 link: 'https://tempoday.com'
 github: 'https://github.com/fachrihawari/tempoday'
 publishedAt: 2025-06-30
-tags: ['typescript', 'tailwindcss', 'svelte', 'dexie', 'vite', 'revenuecat']
+tags: ['typescript', 'tailwindcss', 'svelte', 'dexie', 'vite', 'midtrans']
 ---
 
 ## Inspiration
@@ -48,7 +48,7 @@ Oh boy, where do we start? 😅
 
 **Mobile calendar UX** - Making a calendar interface that doesn't suck on small screens while keeping all three data types accessible? Challenge accepted and conquered!
 
-**Seamless donation integration** - Implementing a smooth donation flow with RevenueCat while maintaining the privacy-first approach. Getting the payment experience just right without being pushy or breaking the user flow took careful UX design.
+**Seamless donation integration** - Implementing a smooth donation flow with Midtrans while maintaining the privacy-first approach. Getting the payment experience just right without being pushy or breaking the user flow took careful UX design.
 
 **Dark mode implementation** - Ensuring a consistent and visually appealing dark mode across all pages and components. Tailwind's `dark:` variants were a lifesaver, but testing and tweaking every element for accessibility and aesthetics took time.
 
@@ -65,7 +65,7 @@ We actually built something pretty awesome! 🎉
 - 🔍 **Powerful search** - Find any task, note, or transaction instantly across all your data
 - ⭐ **Task prioritization** - Organize your to-dos by importance with visual priority indicators
 - 🌙 **Dark mode support** - Fully implemented dark mode for night owls and aesthetic lovers
-- ☕ **Sustainable funding** - Integrated RevenueCat donations that let supporters contribute while keeping the app free for everyone
+- ☕ **Sustainable funding** - Integrated Midtrans donations that let supporters contribute while keeping the app free for everyone
 
 ## What we learned
 
@@ -97,4 +97,4 @@ The goal? Make TempoDay the last productivity app you'll ever need to download. 
 
 ## Open Source & Support
 
-**Open source and always free** - TempoDay will always be completely free to use. The code is open source because we believe productivity tools should be transparent and community-driven. If you love what we're building and want to support the project, we've set up optional donations through RevenueCat - think of it as buying us coffee while we code the next features! ☕
+**Open source and always free** - TempoDay will always be completely free to use. The code is open source because we believe productivity tools should be transparent and community-driven. If you love what we're building and want to support the project, we've set up optional donations through Midtrans - think of it as buying us coffee while we code the next features! ☕
