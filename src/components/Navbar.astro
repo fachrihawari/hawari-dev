@@ -3,22 +3,22 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <header
-  class="z-10 border-t sm:border-b sm:border-t-0 fixed sm:relative sm:bottom-auto bottom-0 left-0 right-0 bg-white"
+  class="z-10 border-t sm:border-b dark:border-black sm:border-t-0 fixed sm:relative sm:bottom-auto bottom-0 left-0 right-0 bg-white dark:bg-gray-800"
 >
   <div
     class="max-w-5xl px-6 py-3 mx-auto flex flex-row items-center justify-between"
   >
-    <a href="/" class="text-3xl font-medium"> hawari.dev </a>
+    <a href="/" class="text-3xl font-medium text-gray-800 dark:text-white"> hawari.dev </a>
     <div class="flex justify-center gap-6">
-      <a href="/blog" class="flex flex-col sm:flex-row items-center">
-        <Icon size={24} name="iconoir:book" />
+      <a href="/blog" class="flex flex-col sm:flex-row items-center text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">
+        <Icon size={24} name="iconoir:book" class="text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white" />
         <span class="ml-1 font-medium"> Blog </span>
       </a>
       <a
         href="/projects"
-        class="flex flex-col sm:flex-row items-center"
+        class="flex flex-col sm:flex-row items-center text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
       >
-        <Icon size={24} name="iconoir:fire-flame" />
+        <Icon size={24} name="iconoir:fire-flame" class="text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white" />
         <span class="ml-1 font-medium"> Projects </span>
       </a>
     </div>

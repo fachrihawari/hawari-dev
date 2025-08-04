@@ -28,7 +28,7 @@ const { Content } = await entry.render();
 </script>
 
 <MainLayout title={entry.data.title} description={entry.data.description}>
-  <div class="max-w-[65ch] mx-auto mb-8">
+  <div class="max-w-[65ch] mx-auto mb-8 dark:text-gray-300">
     <h1 class="text-4xl mb-6">
       {entry.data.title}
     </h1>
@@ -87,10 +87,10 @@ const { Content } = await entry.render();
       </div>
     </div>
 
-    <div class="w-full h-[2px] mt-6 bg-gray-100"></div>
+    <div class="w-full h-[2px] mt-6 bg-gray-100 dark:bg-gray-600"></div>
   </div>
 
-  <article class="prose mx-auto">
+  <article class="prose mx-auto dark:prose-invert">
     <Content />
 
     <div class="h-6"></div>

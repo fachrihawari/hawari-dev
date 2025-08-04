@@ -7,12 +7,16 @@ interface Props {
 	description?: string;
 }
 
-const { class: className } = Astro.props
-const domain = "hawari.dev"
-const url = "https://hawari.dev"
-const pathname = Astro.url.pathname
-const seoTitle = Astro.props.title ? `${Astro.props.title} | ${domain}` : domain
-const seoDescription = Astro.props.description || "Personal site of Fachri Hawari, a FullStack JavaScript Instructor at Hacktiv8"
+const { class: className } = Astro.props;
+const domain = "hawari.dev";
+const url = "https://hawari.dev";
+const pathname = Astro.url.pathname;
+const seoTitle = Astro.props.title
+	? `${Astro.props.title} | ${domain}`
+	: domain;
+const seoDescription =
+	Astro.props.description ||
+	"Personal site of Fachri Hawari, a FullStack JavaScript Instructor at Hacktiv8";
 ---
 
 <html lang="en">
@@ -23,18 +27,12 @@ const seoDescription = Astro.props.description || "Personal site of Fachri Hawar
 		<meta name="generator" content={Astro.generator} />
 		<title>{seoTitle}</title>
 
-		<meta
-			name="description"
-			content={seoDescription}
-		/>
+		<meta name="description" content={seoDescription} />
 		<meta name="author" content="Fachri Hawari<fachri.hawari@gmail.com>" />
 
 		<!-- Open Graph -->
 		<meta property="og:title" content={seoTitle} />
-		<meta
-			property="og:description"
-			content={seoDescription}
-		/>
+		<meta property="og:description" content={seoDescription} />
 		<meta property="og:url" content={url} />
 		<meta property="og:image" content={`${url}/me-square.jpg`} />
 		<meta property="og:type" content="website" />
@@ -42,16 +40,13 @@ const seoDescription = Astro.props.description || "Personal site of Fachri Hawar
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={seoTitle} />
-		<meta
-			name="twitter:description"
-			content={seoDescription}
-		/>
+		<meta name="twitter:description" content={seoDescription} />
 		<meta name="twitter:image" content={`${url}/me-square.jpg`} />
 		<meta name="twitter:creator" content="@fachrihawari" />
 		<meta name="twitter:site" content="@fachrihawari" />
 		<link rel="canonical" href={`${url}${pathname}`} />
 	</head>
-	<body>
+	<body class="bg-white dark:bg-gray-900">
 		<Navbar />
 		<!-- Debug responsive bg-green-100 md:bg-red-100 sm:bg-yellow-100 lg:bg-white h-screen -->
 		<div class={`max-w-5xl mx-auto pb-16 p-6 md:pt-12 ${className}`}>
