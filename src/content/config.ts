@@ -5,7 +5,8 @@ const BaseSchema = z.object({
   title: z.string(),
   description: z.string(),
   publishedAt: z.date(),
-  tags: z.array(z.string())
+  tags: z.array(z.string()),
+  draft: z.boolean().default(false)
 })
 
 // Define a `type` and `schema` for each collection

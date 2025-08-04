@@ -3,12 +3,12 @@ title: 'Database Indexing'
 description: 'Learn how database indexing works'
 publishedAt: 2025-07-21
 tags: ["database", "indexing", "performance"]
+draft: true
 ---
 
 ## Preamble
 
-Imagine you have a large book with thousands of pages, and you want to find a specific topic quickly. Instead of flipping through every page, you can use the index at the back of the book to jump directly to the relevant section. This is similar to how database indexing works.
-
+Imagine you have a large book with thousands of pages, and you want to find a specific topic quickly. Instead of flipping through every page, you can use the index at the back of the book to jump directly to the relevant section. 
 
 ![Finding something in a book](https://example.com/database-indexing.png)
 

@@ -8,7 +8,9 @@ import Card from "../components/Card.astro";
 export const prerender = true;
 
 const rawPosts = await getCollection("posts");
-const posts = orderBy(rawPosts, ["data.publishedAt"], ["desc"]);
+const posts = orderBy(rawPosts, ["data.publishedAt"], ["desc"]).filter(
+  (post) => !post.data.draft
+);
 ---
 
 <MainLayout title="Blog" description="Read articles about JavaScript, TypeScript, and web development by Fachri Hawari" class="max-w-[65ch]">

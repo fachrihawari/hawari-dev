@@ -3,6 +3,7 @@ title: 'Markdown'
 description: 'This is an example full page with markdown'
 publishedAt: 2023-12-20
 tags: ["example", "blogging", "markdown"]
+draft: true
 ---
 
 ini markdown
