@@ -1,0 +1,408 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout
+	title="CV"
+	description="Curriculum Vitae of Fachri Hawari, FullStack JavaScript Instructor at Hacktiv8"
+>
+	<style>
+		@media print {
+			body {
+				font-size: 11px !important;
+				line-height: 1.4 !important;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+			.no-print {
+				display: none !important;
+			}
+			.print-break {
+				page-break-before: always;
+			}
+			.print-avoid-break {
+				page-break-inside: avoid;
+			}
+			.cv-container {
+				box-shadow: none !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				max-width: none !important;
+			}
+		}
+	</style>
+
+	<div
+		class="cv-container max-w-4xl mx-auto my-4 sm:my-8 bg-white dark:bg-gray-900 print:bg-white print:my-0 shadow-sm print:shadow-none border border-gray-100 dark:border-gray-700 print:border-none rounded-lg print:rounded-none overflow-hidden"
+	>
+		<!-- Clean Header -->
+		<header
+			class="border-b border-gray-200 dark:border-gray-600 print:border-gray-400 p-6 sm:p-8 print:p-6 print-avoid-break"
+		>
+			<h1 class="text-2xl sm:text-3xl print:text-2xl font-bold text-gray-900 dark:text-white print:text-black mb-3">
+				Fachri Hawari
+			</h1>
+			<p class="text-base sm:text-lg print:text-base text-gray-700 dark:text-gray-300 print:text-black mb-5 font-medium">
+				FullStack Software Engineer & JavaScript Instructor
+			</p>
+			<div
+				class="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-6 print:gap-4 text-sm print:text-xs text-gray-600 dark:text-gray-400 print:text-black"
+			>
+				<span class="flex items-center"><span class="mr-2">📍</span> Tangerang, Banten</span>
+				<span class="flex items-center"><span class="mr-2">✉️</span> fachri.hawari@gmail.com</span>
+				<span class="flex items-center"><span class="mr-2">📞</span> +6281383142500</span>
+			</div>
+		</header>
+
+		<div class="p-6 sm:p-8 print:p-6 space-y-8 print:space-y-6">
+			<!-- Professional Summary -->
+			<section class="print-avoid-break">
+				<h2
+					class="text-xl print:text-lg font-semibold text-gray-900 dark:text-white print:text-black mb-4 border-b border-gray-200 dark:border-gray-600 print:border-gray-400 pb-3"
+				>
+					Professional Summary
+				</h2>
+				<p class="text-gray-700 dark:text-gray-300 print:text-black leading-relaxed text-sm sm:text-base">
+					A passionate and adaptable Fullstack Software Engineer who thrives in
+					solving complex technical challenges, building intuitive user
+					experiences, and delivering scalable backend systems from the ground
+					up. Currently working as a Fullstack JavaScript Instructor at one of
+					Indonesia's leading coding bootcamps, and actively seeking new
+					challenges to grow my impact and skillset.
+				</p>
+			</section>
+
+			<!-- Experience -->
+			<section class="print-avoid-break">
+				<h2
+					class="text-xl print:text-lg font-semibold text-gray-900 dark:text-white print:text-black mb-5 border-b border-gray-200 dark:border-gray-600 print:border-gray-400 pb-3"
+				>
+					Professional Experience
+				</h2>
+
+				<!-- Experience Items -->
+				<div class="space-y-8 print:space-y-6">
+					<!-- Hacktiv8 -->
+					<div class="print-avoid-break">
+						<div
+							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"
+						>
+							<div class="flex-1">
+								<h3
+									class="text-base sm:text-lg print:text-base font-semibold text-gray-900 dark:text-white print:text-black mb-1"
+								>
+									Full Stack JavaScript Instructor
+								</h3>
+								<p class="text-gray-800 dark:text-gray-200 print:text-black font-medium mb-1">
+									Hacktiv8 Indonesia
+								</p>
+								<p class="text-sm text-gray-600 dark:text-gray-400 print:text-black">
+									Jakarta, Indonesia • 09/2022 - Present
+								</p>
+							</div>
+							<div class="mt-2 sm:mt-0 sm:ml-4">
+								<span class="inline-block bg-green-100 text-green-800 print:bg-gray-200 print:text-black px-3 py-1 rounded-full text-xs font-medium">
+									Current
+								</span>
+							</div>
+						</div>
+						<p class="text-gray-700 dark:text-gray-300 print:text-black mb-4 leading-relaxed text-sm sm:text-base">
+							Empowering the next generation of software engineers by delivering
+							immersive training in full stack JavaScript development. I
+							specialize in guiding students through modern technologies such as
+							React, Next.js, GraphQL, and Docker, while also strengthening
+							their understanding of backend systems and database management.
+						</p>
+						<ul
+							class="list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black space-y-2 text-sm ml-4"
+						>
+							<li>
+								Mentored hundreds of students across dozens of classes,
+								supporting their journey into the tech industry
+							</li>
+							<li>
+								Designed and delivered hands-on projects simulating real-world
+								software development
+							</li>
+							<li>
+								Emphasized best practices in version control, testing,
+								deployment workflows, and modern development processes
+							</li>
+						</ul>
+					</div>
+
+					<!-- AdaKerja -->
+					<div class="print-avoid-break">
+						<div
+							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"
+						>
+							<div class="flex-1">
+								<h3
+									class="text-base sm:text-lg print:text-base font-semibold text-gray-900 dark:text-white print:text-black mb-1"
+								>
+									Software Engineer
+								</h3>
+								<p class="text-gray-800 dark:text-gray-200 print:text-black font-medium mb-1">
+									AdaKerja
+								</p>
+								<p class="text-sm text-gray-600 dark:text-gray-400 print:text-black">
+									Singapore (Remote) • 10/2019 - 07/2022
+								</p>
+							</div>
+						</div>
+						<p class="text-gray-700 dark:text-gray-300 print:text-black mb-4 leading-relaxed text-sm sm:text-base">
+							Drove React & React Native engineering efforts to deliver
+							high-quality mobile and web applications.
+						</p>
+						<ul
+							class="list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black space-y-2 text-sm ml-4"
+						>
+							<li>
+								Contributed to the end-to-end development of the JobSeeker
+								mobile app using React Native
+							</li>
+							<li>
+								Translated UI designs from Zeplin and Figma into pixel-perfect,
+								responsive React Native components
+							</li>
+							<li>
+								Developed two Progressive Web Apps—for Employers and
+								JobSeekers—using React
+							</li>
+							<li>
+								Built a reusable internal UIKit with Storybook to streamline
+								component sharing across PWAs
+							</li>
+							<li>
+								Managed the deployment process for mobile apps on the App Store
+								and Google Play Store
+							</li>
+							<li>
+								Maintained application stability by implementing robust unit and
+								end-to-end tests
+							</li>
+							<li>
+								Actively participated in upgrading the codebase to the latest
+								React Native version
+							</li>
+							<li>
+								Took the opportunity to lead a feature team, contributing to
+								planning, development, and delivery
+							</li>
+						</ul>
+					</div>
+
+					<!-- PT Kopi Petani Indonesia -->
+					<div class="print-avoid-break">
+						<div
+							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"
+						>
+							<div class="flex-1">
+								<h3
+									class="text-base sm:text-lg print:text-base font-semibold text-gray-900 dark:text-white print:text-black mb-1"
+								>
+									Software Engineer
+								</h3>
+								<p class="text-gray-800 dark:text-gray-200 print:text-black font-medium mb-1">
+									PT Kopi Petani Indonesia (KOPPI)
+								</p>
+								<p class="text-sm text-gray-600 dark:text-gray-400 print:text-black">
+									Jakarta, Indonesia (Remote) • 10/2018 - 09/2019
+								</p>
+							</div>
+						</div>
+						<p class="text-gray-700 dark:text-gray-300 print:text-black mb-4 leading-relaxed text-sm sm:text-base">
+							Led React Native engineering efforts to deliver a high-quality
+							cross-platform mobile application in a fast-paced timeline.
+						</p>
+						<ul
+							class="list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black space-y-2 text-sm ml-4"
+						>
+							<li>
+								Developed a fully functional iOS and Android app from scratch
+								using React Native
+							</li>
+							<li>
+								Built and launched the app to production in just 1 month,
+								meeting tight business deadlines
+							</li>
+							<li>
+								Translated UI designs from Zeplin into pixel-perfect, reusable
+								React Native components
+							</li>
+							<li>
+								Ensured app stability and performance through comprehensive unit
+								and end-to-end testing
+							</li>
+							<li>
+								Managed the deployment process to the App Store and Google Play
+								Store
+							</li>
+							<li>
+								Successfully upgraded to the latest React Native version with
+								zero production issues
+							</li>
+						</ul>
+					</div>
+
+					<!-- PT Shyang Yao Fung -->
+					<div class="print-avoid-break">
+						<div
+							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"
+						>
+							<div class="flex-1">
+								<h3
+									class="text-base sm:text-lg print:text-base font-semibold text-gray-900 dark:text-white print:text-black mb-1"
+								>
+									Software Engineer
+								</h3>
+								<p class="text-gray-800 dark:text-gray-200 print:text-black font-medium mb-1">
+									PT Shyang Yao Fung
+								</p>
+								<p class="text-sm text-gray-600 dark:text-gray-400 print:text-black">
+									Tangerang, Banten • 08/2016 - 03/2018
+								</p>
+							</div>
+						</div>
+						<p class="text-gray-700 dark:text-gray-300 print:text-black mb-4 leading-relaxed text-sm sm:text-base">
+							By leveraging software to streamline factory operations, I led the
+							development of several impactful internal tools.
+						</p>
+						<ul
+							class="list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black space-y-2 text-sm ml-4"
+						>
+							<li>
+								<strong>Resume Builder Web Application:</strong> Streamlined the
+								recruitment process for the HR department, enabling efficient management
+								of thousands of applicants during a large-scale job fair
+							</li>
+							<li>
+								<strong>Real-Time Shoe Production Monitoring System:</strong> Improved
+								production visibility and enabled faster, data-driven decision-making
+								on the factory floor
+							</li>
+							<li>
+								<strong>Enhancements to Internal Applications:</strong> Upgraded
+								and extended existing internal systems by adding new features and
+								improving usability to meet evolving operational needs
+							</li>
+						</ul>
+						<p class="text-gray-700 dark:text-gray-300 print:text-black mt-3 text-sm">
+							These solutions have been successfully adopted by our sister
+							company, demonstrating their scalability, reusability, and
+							cross-company value.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills -->
+			<section class="print-avoid-break">
+				<h2
+					class="text-xl print:text-lg font-semibold text-gray-900 dark:text-white print:text-black mb-5 border-b border-gray-200 dark:border-gray-600 print:border-gray-400 pb-3"
+				>
+					Core Competencies
+				</h2>
+
+				<!-- Technical Skills -->
+				<div class="mb-8 print:mb-6">
+					<h3
+						class="text-lg print:text-base font-medium text-gray-900 dark:text-white print:text-black mb-4"
+					>
+						Technical Skills
+					</h3>
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 print:gap-4">
+						<div>
+							<p class="font-semibold text-gray-900 dark:text-white print:text-black text-sm mb-2">Languages</p>
+							<p class="text-gray-700 dark:text-gray-300 print:text-black text-sm">JavaScript, TypeScript</p>
+						</div>
+						<div>
+							<p class="font-semibold text-gray-900 dark:text-white print:text-black text-sm mb-2">Frontend</p>
+							<p class="text-gray-700 dark:text-gray-300 print:text-black text-sm">React, React Native, Redux, Storybook</p>
+						</div>
+						<div>
+							<p class="font-semibold text-gray-900 dark:text-white print:text-black text-sm mb-2">Backend & APIs</p>
+							<p class="text-gray-700 dark:text-gray-300 print:text-black text-sm">Node.js, Express, Nest.js, REST APIs, GraphQL</p>
+						</div>
+						<div>
+							<p class="font-semibold text-gray-900 dark:text-white print:text-black text-sm mb-2">Testing & Quality</p>
+							<p class="text-gray-700 dark:text-gray-300 print:text-black text-sm">Jest, Testing Library, Detox, Unit & E2E Testing</p>
+						</div>
+						<div>
+							<p class="font-semibold text-gray-900 dark:text-white print:text-black text-sm mb-2">DevOps & Cloud</p>
+							<p class="text-gray-700 dark:text-gray-300 print:text-black text-sm">Git, Docker, AWS, GCP, CircleCI, GitHub Actions</p>
+						</div>
+						<div>
+							<p class="font-semibold text-gray-900 dark:text-white print:text-black text-sm mb-2">Data & Tools</p>
+							<p class="text-gray-700 dark:text-gray-300 print:text-black text-sm">PostgreSQL, MongoDB, Linux CLI</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Professional Skills -->
+				<div>
+					<h3
+						class="text-lg print:text-base font-medium text-gray-900 dark:text-white print:text-black mb-4"
+					>
+						Professional Skills
+					</h3>
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 print:gap-2">
+						<div class="flex items-center">
+							<span class="w-2 h-2 bg-gray-400 dark:bg-gray-500 print:bg-black rounded-full mr-3"></span>
+							<span class="text-gray-700 dark:text-gray-300 print:text-black text-sm">Teamwork & Collaboration</span>
+						</div>
+						<div class="flex items-center">
+							<span class="w-2 h-2 bg-gray-400 dark:bg-gray-500 print:bg-black rounded-full mr-3"></span>
+							<span class="text-gray-700 dark:text-gray-300 print:text-black text-sm">Clear Communication</span>
+						</div>
+						<div class="flex items-center">
+							<span class="w-2 h-2 bg-gray-400 dark:bg-gray-500 print:bg-black rounded-full mr-3"></span>
+							<span class="text-gray-700 dark:text-gray-300 print:text-black text-sm">Integrity & Accountability</span>
+						</div>
+						<div class="flex items-center">
+							<span class="w-2 h-2 bg-gray-400 dark:bg-gray-500 print:bg-black rounded-full mr-3"></span>
+							<span class="text-gray-700 dark:text-gray-300 print:text-black text-sm">Mentorship & Leadership</span>
+						</div>
+						<div class="flex items-center">
+							<span class="w-2 h-2 bg-gray-400 dark:bg-gray-500 print:bg-black rounded-full mr-3"></span>
+							<span class="text-gray-700 dark:text-gray-300 print:text-black text-sm">Problem Solving</span>
+						</div>
+						<div class="flex items-center">
+							<span class="w-2 h-2 bg-gray-400 dark:bg-gray-500 print:bg-black rounded-full mr-3"></span>
+							<span class="text-gray-700 dark:text-gray-300 print:text-black text-sm">Adaptability</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Education -->
+			<section class="print-avoid-break">
+				<h2
+					class="text-xl print:text-lg font-semibold text-gray-900 dark:text-white print:text-black mb-5 border-b border-gray-200 dark:border-gray-600 print:border-gray-400 pb-3"
+				>
+					Education
+				</h2>
+
+				<div>
+					<div
+						class="flex flex-col sm:flex-row sm:justify-between sm:items-start"
+					>
+						<div class="flex-1">
+							<h3
+								class="text-base sm:text-lg print:text-base font-medium text-gray-900 dark:text-white print:text-black mb-1"
+							>
+								Software Engineering
+							</h3>
+							<p class="text-gray-800 dark:text-gray-200 print:text-black font-medium mb-1">
+								SMK Negeri 4 Kota Tangerang
+							</p>
+							<p class="text-sm text-gray-600 dark:text-gray-400 print:text-black">
+								Tangerang, Banten • Graduated 07/2015
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</MainLayout>

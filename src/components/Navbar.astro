@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <header
-  class="z-10 border-t sm:border-b dark:border-black sm:border-t-0 fixed sm:relative sm:bottom-auto bottom-0 left-0 right-0 bg-white dark:bg-gray-800"
+  class="z-10 border-t sm:border-b dark:border-black sm:border-t-0 fixed sm:relative sm:bottom-auto bottom-0 left-0 right-0 bg-white dark:bg-gray-800 print:hidden"
 >
   <div
     class="max-w-5xl px-6 py-3 mx-auto flex flex-row items-center justify-between"
@@ -20,6 +20,13 @@ import { Icon } from 'astro-icon/components';
       >
         <Icon size={24} name="iconoir:fire-flame" class="text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white" />
         <span class="ml-1 font-medium"> Projects </span>
+      </a>
+      <a
+        href="/cv"
+        class="flex flex-col sm:flex-row items-center text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
+      >
+        <Icon size={24} name="iconoir:page" class="text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white" />
+        <span class="ml-1 font-medium"> CV </span>
       </a>
     </div>
   </div>
