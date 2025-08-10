@@ -4,7 +4,7 @@ description: 'County is a simple counter service that fits your needs.'
 link: 'https://county.hawari.dev'
 github: 'https://github.com/fachrihawari/county'
 publishedAt: 2024-11-30
-tags: ['typescript', 'bun']
+tags: ['typescript', 'bun', 'sqlite']
 ---
 
 
