@@ -9,7 +9,7 @@ export const prerender = true;
 
 const rawPosts = await getCollection("posts");
 const posts = orderBy(rawPosts, ["data.publishedAt"], ["desc"]).filter(
-  (post) => !post.data.draft
+  (post) => process.env.NODE_ENV === 'development' || !post.data.draft
 );
 ---
 
