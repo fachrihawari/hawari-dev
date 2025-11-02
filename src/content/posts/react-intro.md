@@ -3,6 +3,7 @@ title: "React Intro"
 description: "Belajar React dasar"
 publishedAt: 2025-01-21
 tags: ["react", "javascript", "web"]
+draft: true
 ---
 
 ## Intro
