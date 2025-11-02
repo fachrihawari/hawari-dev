@@ -9,7 +9,7 @@ import icon from "astro-icon";
 export default defineConfig({
   site: "https://hawari.dev",
   integrations: [tailwind(), svelte(), sitemap(), icon()],
-  output: "server",
+  output: "hybrid",
   image: {
     service: sharpImageService()
   },
