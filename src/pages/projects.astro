@@ -18,7 +18,7 @@ const projects = orderBy(rawProjects, ["data.publishedAt"], ["desc"]).filter(
   description="Explore projects developed by Fachri Hawari, including web applications and tools"
   class="max-w-[65ch]"
 >
-  <h1 class="text-3xl font-medium">Projects</h1>
+  <h1 class="text-3xl font-medium text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">Projects</h1>
   <ul class="mt-6">
     {
       projects.map((project) => (

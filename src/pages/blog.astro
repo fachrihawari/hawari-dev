@@ -14,7 +14,7 @@ const posts = orderBy(rawPosts, ["data.publishedAt"], ["desc"]).filter(
 ---
 
 <MainLayout title="Blog" description="Read articles about JavaScript, TypeScript, and web development by Fachri Hawari" class="max-w-[65ch]">
-  <h1 class="text-3xl font-medium">Blog</h1>
+  <h1 class="text-3xl font-medium text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">Blog</h1>
   <ul class="mt-6">
     {
       posts.map((post) => (
