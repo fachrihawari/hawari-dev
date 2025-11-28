@@ -6,67 +6,25 @@ import MainLayout from "../layouts/MainLayout.astro";
 	title="CV"
 	description="Curriculum Vitae of Fachri Hawari, FullStack JavaScript Instructor at Hacktiv8"
 >
-	<style>
-		@media print {
-			body {
-				font-size: 10px !important;
-				line-height: 1.2 !important;
-				margin: 0 !important;
-				padding: 0 !important;
-			}
-			.no-print {
-				display: none !important;
-			}
-			.print-break {
-				page-break-before: always;
-			}
-			.print-avoid-break {
-				page-break-inside: avoid;
-			}
-			.cv-container {
-				box-shadow: none !important;
-				margin: 0 !important;
-				padding: 0 !important;
-				max-width: none !important;
-			}
-			/* Minimal spacing for print */
-			.print-compact-spacing {
-				margin-bottom: 0.5rem !important;
-			}
-			.print-section-spacing {
-				margin-bottom: 1rem !important;
-			}
-			.print-minimal-padding {
-				padding: 0.5rem !important;
-			}
-			.print-minimal-gap {
-				gap: 0.25rem !important;
-			}
-			.print-no-margin {
-				margin: 0 !important;
-			}
-		}
-	</style>
-
 	<div
-		class="cv-container max-w-4xl mx-auto my-4 sm:my-8 bg-white dark:bg-gray-900 print:bg-white print:my-0 shadow-sm print:shadow-none border border-gray-100 dark:border-gray-700 print:border-none rounded-lg print:rounded-none overflow-hidden"
+		class="bg-white dark:bg-gray-900 overflow-hidden"
 	>
 		<!-- Clean Header -->
 		<header
-			class="border-b border-gray-200 dark:border-gray-600 print:border-gray-400 p-6 sm:p-8 print-minimal-padding print-avoid-break"
+			class="p-2 sm:p-8"
 		>
 			<h1
-				class="text-2xl sm:text-3xl print:text-lg font-bold text-gray-900 dark:text-white print:text-black mb-3 print-compact-spacing"
+				class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3"
 			>
 				Fachri Hawari
 			</h1>
 			<p
-				class="text-base sm:text-lg print:text-sm text-gray-700 dark:text-gray-300 print:text-black mb-5 print-compact-spacing font-medium"
+				class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-5 font-medium"
 			>
 				FullStack Software Engineer & JavaScript Instructor
 			</p>
 			<div
-				class="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-6 print-minimal-gap text-sm print:text-xs text-gray-600 dark:text-gray-400 print:text-black"
+				class="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-6 text-sm text-gray-600 dark:text-gray-400"
 			>
 				<span class="flex items-center"
 					><span class="mr-2">📍</span> Tangerang, Banten</span
@@ -80,16 +38,16 @@ import MainLayout from "../layouts/MainLayout.astro";
 			</div>
 		</header>
 
-		<div class="p-6 sm:p-8 print-minimal-padding space-y-8 print:space-y-2">
+		<div class="p-2 sm:p-8 space-y-8">
 			<!-- Professional Summary -->
-			<section class="print-avoid-break print-section-spacing">
+			<section class="">
 				<h2
-					class="text-xl print:text-base font-semibold text-gray-900 dark:text-white print:text-black mb-4 print-compact-spacing border-b border-gray-200 dark:border-gray-600 print:border-gray-400 pb-3 print:pb-1"
+					class="text-xl font-semibold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-600 pb-3"
 				>
 					Summary
 				</h2>
 				<p
-					class="text-gray-700 dark:text-gray-300 print:text-black leading-relaxed text-sm sm:text-base print:text-xs print:leading-tight print-no-margin"
+					class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base"
 				>
 					A passionate and adaptable Fullstack Software Engineer who thrives in
 					solving complex technical challenges, building intuitive user
@@ -101,47 +59,47 @@ import MainLayout from "../layouts/MainLayout.astro";
 			</section>
 
 			<!-- Experience -->
-			<section class="print-avoid-break print-section-spacing">
+			<section class="">
 				<h2
-					class="text-xl print:text-base font-semibold text-gray-900 dark:text-white print:text-black mb-5 print-compact-spacing border-b border-gray-200 dark:border-gray-600 print:border-gray-400 pb-3 print:pb-1"
+					class="text-xl font-semibold text-gray-900 dark:text-white mb-5 border-b border-gray-200 dark:border-gray-600 pb-3"
 				>
 					Experience
 				</h2>
 
 				<!-- Experience Items -->
-				<div class="space-y-8 print:space-y-2">
+				<div class="space-y-8">
 					<!-- Hacktiv8 -->
-					<div class="print-avoid-break print-section-spacing">
+					<div class="">
 						<div
-							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 print-compact-spacing"
+							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"
 						>
 							<div class="flex-1">
 								<h3
-									class="text-base sm:text-lg print:text-sm font-semibold text-gray-900 dark:text-white print:text-black mb-1 print:mb-0"
+									class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-1"
 								>
 									Full Stack JavaScript Instructor
 								</h3>
 								<p
-									class="text-gray-800 dark:text-gray-200 print:text-black font-medium mb-1 print:mb-0"
+									class="text-gray-800 dark:text-gray-200 font-medium mb-1"
 								>
 									Hacktiv8 Indonesia
 								</p>
 								<p
-									class="text-sm text-gray-600 dark:text-gray-400 print:text-black print:text-xs"
+									class="text-sm text-gray-600 dark:text-gray-400"
 								>
 									Jakarta, Indonesia • 09/2022 - Present
 								</p>
 							</div>
-							<div class="mt-2 sm:mt-0 sm:ml-4 print:hidden">
+							<div class="mt-2 sm:mt-0 sm:ml-4">
 								<span
-									class="inline-block bg-green-100 text-green-800 print:bg-gray-200 print:text-black px-3 py-1 rounded-full text-xs font-medium"
+									class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium"
 								>
 									Current
 								</span>
 							</div>
 						</div>
 						<p
-							class="text-gray-700 dark:text-gray-300 print:text-black mb-4 print-compact-spacing leading-relaxed text-sm sm:text-base print:text-xs print:leading-tight"
+							class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-sm sm:text-base"
 						>
 							Empowering the next generation of software engineers by delivering
 							immersive training in full stack JavaScript development. I
@@ -150,7 +108,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 							their understanding of backend systems and database management.
 						</p>
 						<ul
-							class="list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black space-y-2 print:space-y-0 text-sm print:text-xs ml-4 print:ml-2"
+							class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 text-sm ml-4"
 						>
 							<li>
 								Mentored hundreds of students across dozens of classes,
@@ -168,36 +126,36 @@ import MainLayout from "../layouts/MainLayout.astro";
 					</div>
 
 					<!-- AdaKerja -->
-					<div class="print-avoid-break print-section-spacing">
+					<div class="">
 						<div
-							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 print-compact-spacing"
+							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"
 						>
 							<div class="flex-1">
 								<h3
-									class="text-base sm:text-lg print:text-sm font-semibold text-gray-900 dark:text-white print:text-black mb-1 print:mb-0"
+									class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-1"
 								>
 									Software Engineer
 								</h3>
 								<p
-									class="text-gray-800 dark:text-gray-200 print:text-black font-medium mb-1 print:mb-0"
+									class="text-gray-800 dark:text-gray-200 font-medium mb-1"
 								>
 									AdaKerja
 								</p>
 								<p
-									class="text-sm text-gray-600 dark:text-gray-400 print:text-black print:text-xs"
+									class="text-sm text-gray-600 dark:text-gray-400"
 								>
 									Singapore (Remote) • 10/2019 - 07/2022
 								</p>
 							</div>
 						</div>
 						<p
-							class="text-gray-700 dark:text-gray-300 print:text-black mb-4 print-compact-spacing leading-relaxed text-sm sm:text-base print:text-xs print:leading-tight"
+							class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-sm sm:text-base"
 						>
 							Drove React & React Native engineering efforts to deliver
 							high-quality mobile and web applications.
 						</p>
 						<ul
-							class="list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black space-y-2 print:space-y-0 text-sm print:text-xs ml-4 print:ml-2"
+							class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 text-sm ml-4"
 						>
 							<li>
 								Contributed to the end-to-end development of the JobSeeker
@@ -235,36 +193,36 @@ import MainLayout from "../layouts/MainLayout.astro";
 					</div>
 
 					<!-- PT Kopi Petani Indonesia -->
-					<div class="print-avoid-break print-section-spacing">
+					<div class="">
 						<div
-							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 print-compact-spacing"
+							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"
 						>
 							<div class="flex-1">
 								<h3
-									class="text-base sm:text-lg print:text-sm font-semibold text-gray-900 dark:text-white print:text-black mb-1 print:mb-0"
+									class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-1"
 								>
 									Software Engineer
 								</h3>
 								<p
-									class="text-gray-800 dark:text-gray-200 print:text-black font-medium mb-1 print:mb-0"
+									class="text-gray-800 dark:text-gray-200 font-medium mb-1"
 								>
 									PT Kopi Petani Indonesia (KOPPI)
 								</p>
 								<p
-									class="text-sm text-gray-600 dark:text-gray-400 print:text-black print:text-xs"
+									class="text-sm text-gray-600 dark:text-gray-400"
 								>
 									Jakarta, Indonesia (Remote) • 10/2018 - 09/2019
 								</p>
 							</div>
 						</div>
 						<p
-							class="text-gray-700 dark:text-gray-300 print:text-black mb-4 print-compact-spacing leading-relaxed text-sm sm:text-base print:text-xs print:leading-tight"
+							class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-sm sm:text-base"
 						>
 							Led React Native engineering efforts to deliver a high-quality
 							cross-platform mobile application in a fast-paced timeline.
 						</p>
 						<ul
-							class="list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black space-y-2 print:space-y-0 text-sm print:text-xs ml-4 print:ml-2"
+							class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 text-sm ml-4"
 						>
 							<li>
 								Developed a fully functional iOS and Android app from scratch
@@ -294,36 +252,36 @@ import MainLayout from "../layouts/MainLayout.astro";
 					</div>
 
 					<!-- PT Shyang Yao Fung -->
-					<div class="print-avoid-break print-section-spacing">
+					<div class="">
 						<div
-							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 print-compact-spacing"
+							class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4"
 						>
 							<div class="flex-1">
 								<h3
-									class="text-base sm:text-lg print:text-sm font-semibold text-gray-900 dark:text-white print:text-black mb-1 print:mb-0"
+									class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-1"
 								>
 									Software Engineer
 								</h3>
 								<p
-									class="text-gray-800 dark:text-gray-200 print:text-black font-medium mb-1 print:mb-0"
+									class="text-gray-800 dark:text-gray-200 font-medium mb-1"
 								>
 									PT Shyang Yao Fung
 								</p>
 								<p
-									class="text-sm text-gray-600 dark:text-gray-400 print:text-black print:text-xs"
+									class="text-sm text-gray-600 dark:text-gray-400"
 								>
 									Tangerang, Banten • 08/2016 - 03/2018
 								</p>
 							</div>
 						</div>
 						<p
-							class="text-gray-700 dark:text-gray-300 print:text-black mb-4 print-compact-spacing leading-relaxed text-sm sm:text-base print:text-xs print:leading-tight"
+							class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed text-sm sm:text-base"
 						>
 							By leveraging software to streamline factory operations, I led the
 							development of several impactful internal tools.
 						</p>
 						<ul
-							class="list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black space-y-2 print:space-y-0 text-sm print:text-xs ml-4 print:ml-2"
+							class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 text-sm ml-4"
 						>
 							<li>
 								<strong>Resume Builder Web Application:</strong> Streamlined the
@@ -342,7 +300,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 							</li>
 						</ul>
 						<p
-							class="text-gray-700 dark:text-gray-300 print:text-black mt-3 print-compact-spacing text-sm print:text-xs print:leading-tight"
+							class="text-gray-700 dark:text-gray-300 mt-3 text-sm"
 						>
 							These solutions have been successfully adopted by our sister
 							company, demonstrating their scalability, reusability, and
@@ -353,26 +311,26 @@ import MainLayout from "../layouts/MainLayout.astro";
 			</section>
 
 			<!-- Open Source Contributions -->
-			<section class="print-avoid-break print-section-spacing">
+			<section class="">
 				<h2
-					class="text-xl print:text-base font-semibold text-gray-900 dark:text-white print:text-black mb-5 print-compact-spacing border-b border-gray-200 dark:border-gray-600 print:border-gray-400 pb-3 print:pb-1"
+					class="text-xl font-semibold text-gray-900 dark:text-white mb-5 border-b border-gray-200 dark:border-gray-600 pb-3"
 				>
 					Open Source Contributions
 				</h2>
-				<div class="space-y-4 print:space-y-1">
-					<div class="print-avoid-break">
+				<div class="space-y-4">
+					<div class="">
 						<h3
-							class="text-base font-semibold text-gray-900 dark:text-white print:text-black mb-1 print:mb-0"
+							class="text-base font-semibold text-gray-900 dark:text-white mb-1"
 						>
 							Nuxt Firebase Module
 						</h3>
 						<p
-							class="text-sm text-gray-600 dark:text-gray-400 print:text-black print:text-xs mb-2 print-compact-spacing"
+							class="text-sm text-gray-600 dark:text-gray-400 mb-2"
 						>
 							Community-maintained Firebase integration for Nuxt.js applications
 						</p>
 						<ul
-							class="list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black space-y-1 print:space-y-0 text-sm print:text-xs ml-4 print:ml-2"
+							class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 text-sm ml-4"
 						>
 							<li>
 								<strong>Optimization:</strong> Improved bundle size by loading Firebase
@@ -381,7 +339,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 								<a
 									href="https://github.com/nuxt-community/firebase-module/pull/43"
 									target="_blank"
-									class="text-blue-600 dark:text-blue-400 print:text-black text-xs hover:underline"
+									class="text-blue-600 dark:text-blue-400 text-xs hover:underline"
 								>
 									PR #43
 								</a>
@@ -393,7 +351,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 								<a
 									href="https://github.com/nuxt-community/firebase-module/pull/46"
 									target="_blank"
-									class="text-blue-600 dark:text-blue-400 print:text-black text-xs hover:underline"
+									class="text-blue-600 dark:text-blue-400 text-xs hover:underline"
 								>
 									PR #46
 								</a>
@@ -404,26 +362,26 @@ import MainLayout from "../layouts/MainLayout.astro";
 								<a
 									href="https://github.com/nuxt-community/firebase-module/pull/49"
 									target="_blank"
-									class="text-blue-600 dark:text-blue-400 print:text-black text-xs hover:underline"
+									class="text-blue-600 dark:text-blue-400 text-xs hover:underline"
 								>
 									PR #49
 								</a>
 							</li>
 						</ul>
 					</div>
-					<div class="print-avoid-break">
+					<div class="">
 						<h3
-							class="text-base font-semibold text-gray-900 dark:text-white print:text-black mb-1 print:mb-0"
+							class="text-base font-semibold text-gray-900 dark:text-white mb-1"
 						>
 							Mongoloquent
 						</h3>
 						<p
-							class="text-sm text-gray-600 dark:text-gray-400 print:text-black print:text-xs mb-2 print-compact-spacing"
+							class="text-sm text-gray-600 dark:text-gray-400 mb-2"
 						>
 							A lightweight MongoDB ORM library for Javascript/Typescript
 						</p>
 						<ul
-							class="list-disc list-inside text-gray-700 dark:text-gray-300 print:text-black space-y-1 print:space-y-0 text-sm print:text-xs ml-4 print:ml-2"
+							class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 text-sm ml-4"
 						>
 							<li>
 								<strong>Documentation:</strong> Add Algolia search integration
@@ -431,7 +389,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 								<a
 									href="https://github.com/ajatdarojat45/mongoloquent.com/pull/11"
 									target="_blank"
-									class="text-blue-600 dark:text-blue-400 print:text-black text-xs hover:underline"
+									class="text-blue-600 dark:text-blue-400 text-xs hover:underline"
 								>
 									PR #11
 								</a>
@@ -442,7 +400,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 								<a
 									href="https://github.com/ajatdarojat45/mongoloquent/commit/a8c26bd819bdf46b5b5822ef646e4cbdf3b0f066"
 									target="_blank"
-									class="text-blue-600 dark:text-blue-400 print:text-black text-xs hover:underline"
+									class="text-blue-600 dark:text-blue-400 text-xs hover:underline"
 								>
 									Commit
 								</a>
@@ -453,7 +411,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 								<a
 									href="https://github.com/ajatdarojat45/mongoloquent/pull/22"
 									target="_blank"
-									class="text-blue-600 dark:text-blue-400 print:text-black text-xs hover:underline"
+									class="text-blue-600 dark:text-blue-400 text-xs hover:underline"
 								>
 									PR #22
 								</a>
@@ -464,91 +422,91 @@ import MainLayout from "../layouts/MainLayout.astro";
 			</section>
 
 			<!-- Skills -->
-			<section class="print-avoid-break print-section-spacing">
+			<section class="">
 				<h2
-					class="text-xl print:text-base font-semibold text-gray-900 dark:text-white print:text-black mb-5 print-compact-spacing border-b border-gray-200 dark:border-gray-600 print:border-gray-400 pb-3 print:pb-1"
+					class="text-xl font-semibold text-gray-900 dark:text-white mb-5 border-b border-gray-200 dark:border-gray-600 pb-3"
 				>
 					Core Competencies
 				</h2>
 
 				<!-- Technical Skills -->
-				<div class="mb-8 print:mb-2">
+				<div class="mb-8">
 					<h3
-						class="text-lg print:text-sm font-medium text-gray-900 dark:text-white print:text-black mb-4 print-compact-spacing"
+						class="text-lg font-medium text-gray-900 dark:text-white mb-4"
 					>
 						Technical Skills
 					</h3>
 					<div
-						class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 print:gap-2"
+						class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
 					>
 						<div>
 							<p
-								class="font-semibold text-gray-900 dark:text-white print:text-black text-sm print:text-xs mb-2 print:mb-0"
+								class="font-semibold text-gray-900 dark:text-white text-sm mb-2"
 							>
 								Languages
 							</p>
 							<p
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 							>
 								JavaScript, TypeScript
 							</p>
 						</div>
 						<div>
 							<p
-								class="font-semibold text-gray-900 dark:text-white print:text-black text-sm print:text-xs mb-2 print:mb-0"
+								class="font-semibold text-gray-900 dark:text-white text-sm mb-2"
 							>
 								Frontend
 							</p>
 							<p
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 							>
 								React, React Native, Redux, Storybook
 							</p>
 						</div>
 						<div>
 							<p
-								class="font-semibold text-gray-900 dark:text-white print:text-black text-sm print:text-xs mb-2 print:mb-0"
+								class="font-semibold text-gray-900 dark:text-white text-sm mb-2"
 							>
 								Backend & APIs
 							</p>
 							<p
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 							>
 								Node.js, Express, Nest.js, REST APIs, GraphQL
 							</p>
 						</div>
 						<div>
 							<p
-								class="font-semibold text-gray-900 dark:text-white print:text-black text-sm print:text-xs mb-2 print:mb-0"
+								class="font-semibold text-gray-900 dark:text-white text-sm mb-2"
 							>
 								Testing & Quality
 							</p>
 							<p
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 							>
 								Jest, Testing Library, Detox, Unit & E2E Testing
 							</p>
 						</div>
 						<div>
 							<p
-								class="font-semibold text-gray-900 dark:text-white print:text-black text-sm print:text-xs mb-2 print:mb-0"
+								class="font-semibold text-gray-900 dark:text-white text-sm mb-2"
 							>
 								DevOps & Cloud
 							</p>
 							<p
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 							>
 								Git, Docker, AWS, GCP, CircleCI, GitHub Actions
 							</p>
 						</div>
 						<div>
 							<p
-								class="font-semibold text-gray-900 dark:text-white print:text-black text-sm print:text-xs mb-2 print:mb-0"
+								class="font-semibold text-gray-900 dark:text-white text-sm mb-2"
 							>
 								Data & Tools
 							</p>
 							<p
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 							>
 								PostgreSQL, MongoDB, Linux CLI
 							</p>
@@ -559,64 +517,64 @@ import MainLayout from "../layouts/MainLayout.astro";
 				<!-- Professional Skills -->
 				<div>
 					<h3
-						class="text-lg print:text-sm font-medium text-gray-900 dark:text-white print:text-black mb-4 print-compact-spacing"
+						class="text-lg font-medium text-gray-900 dark:text-white mb-4"
 					>
 						Professional Skills
 					</h3>
 					<div
-						class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 print:gap-1"
+						class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
 					>
 						<div class="flex items-center">
 							<span
-								class="w-1 h-1 bg-black dark:bg-gray-500 print:bg-black rounded-full mr-3 print:mr-2"
+								class="w-1 h-1 bg-black dark:bg-gray-500 rounded-full mr-3"
 							></span>
 							<span
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 								>Teamwork & Collaboration</span
 							>
 						</div>
 						<div class="flex items-center">
 							<span
-								class="w-1 h-1 bg-black dark:bg-gray-500 print:bg-black rounded-full mr-3 print:mr-2"
+								class="w-1 h-1 bg-black dark:bg-gray-500 rounded-full mr-3"
 							></span>
 							<span
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 								>Clear Communication</span
 							>
 						</div>
 						<div class="flex items-center">
 							<span
-								class="w-1 h-1 bg-black dark:bg-gray-500 print:bg-black rounded-full mr-3 print:mr-2"
+								class="w-1 h-1 bg-black dark:bg-gray-500 rounded-full mr-3"
 							></span>
 							<span
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 								>Integrity & Accountability</span
 							>
 						</div>
 						<div class="flex items-center">
 							<span
-								class="w-1 h-1 bg-black dark:bg-gray-500 print:bg-black rounded-full mr-3 print:mr-2"
+								class="w-1 h-1 bg-black dark:bg-gray-500 rounded-full mr-3"
 							></span>
 							<span
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 								>Mentorship & Leadership</span
 							>
 						</div>
 						<div class="flex items-center">
 							<span
-								class="w-1 h-1 bg-black dark:bg-gray-500 print:bg-black rounded-full mr-3 print:mr-2"
+								class="w-1 h-1 bg-black dark:bg-gray-500 rounded-full mr-3"
 							></span>
 							<span
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 								>Problem Solving</span
 							>
 						</div>
 						<div class="flex items-center">
 							<span
-								class="w-1 h-1 bg-black dark:bg-gray-500 print:bg-black rounded-full mr-3 print:mr-2"
+								class="w-1 h-1 bg-black dark:bg-gray-500 rounded-full mr-3"
 							></span>
 							<span
-								class="text-gray-700 dark:text-gray-300 print:text-black text-sm print:text-xs"
+								class="text-gray-700 dark:text-gray-300 text-sm"
 								>Adaptability</span
 							>
 						</div>
@@ -625,9 +583,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 			</section>
 
 			<!-- Education -->
-			<section class="print-avoid-break print-section-spacing">
+			<section class="">
 				<h2
-					class="text-xl print:text-base font-semibold text-gray-900 dark:text-white print:text-black mb-5 print-compact-spacing border-b border-gray-200 dark:border-gray-600 print:border-gray-400 pb-3 print:pb-1"
+					class="text-xl font-semibold text-gray-900 dark:text-white mb-5 border-b border-gray-200 dark:border-gray-600 pb-3"
 				>
 					Education
 				</h2>
@@ -638,17 +596,17 @@ import MainLayout from "../layouts/MainLayout.astro";
 					>
 						<div class="flex-1">
 							<h3
-								class="text-base sm:text-lg print:text-sm font-medium text-gray-900 dark:text-white print:text-black mb-1 print:mb-0"
+								class="text-base sm:text-lg font-medium text-gray-900 dark:text-white mb-1"
 							>
 								Software Engineering
 							</h3>
 							<p
-								class="text-gray-800 dark:text-gray-200 print:text-black font-medium mb-1 print:mb-0"
+								class="text-gray-800 dark:text-gray-200 font-medium mb-1"
 							>
 								SMK Negeri 4 Kota Tangerang
 							</p>
 							<p
-								class="text-sm text-gray-600 dark:text-gray-400 print:text-black print:text-xs"
+								class="text-sm text-gray-600 dark:text-gray-400"
 							>
 								Tangerang, Banten • Graduated 07/2015
 							</p>

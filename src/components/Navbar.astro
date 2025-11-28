@@ -6,27 +6,31 @@ import { Icon } from 'astro-icon/components';
   class="z-10 border-t sm:border-b dark:border-black sm:border-t-0 fixed sm:relative sm:bottom-auto bottom-0 left-0 right-0 bg-white dark:bg-gray-800 print:hidden"
 >
   <div
-    class="max-w-5xl px-6 py-3 mx-auto flex flex-row items-center justify-between"
+    class="max-w-5xl px-6 h-16 mx-auto flex flex-row items-center justify-between"
   >
-    <a href="/" class="text-3xl font-medium text-gray-800 dark:text-white"> hawari.dev </a>
-    <div class="flex justify-center gap-6">
-      <a href="/blog" class="flex flex-col sm:flex-row items-center text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white">
+    <a href="/" class="hidden sm:inline text-xl sm:text-3xl font-medium text-gray-800 dark:text-white">hawari.dev</a>
+    <div class="w-full flex justify-center h-full sm:justify-end">
+      <a href="/" class="w-full sm:w-auto sm:px-3 text-sm sm:text-base flex flex-col sm:flex-row items-center justify-center text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white hover:bg-gray-200">
+        <Icon size={24} name="iconoir:home" class="text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white" />
+        <span class="sm:ml-1 font-medium">Home</span>
+      </a>
+      <a href="/blog" class="w-full sm:w-auto sm:px-3 text-sm sm:text-base flex flex-col sm:flex-row items-center justify-center text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white hover:bg-gray-200">
         <Icon size={24} name="iconoir:book" class="text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white" />
-        <span class="ml-1 font-medium"> Blog </span>
+        <span class="sm:ml-1 font-medium">Blog</span>
       </a>
       <a
         href="/projects"
-        class="flex flex-col sm:flex-row items-center text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
+        class="w-full sm:w-auto sm:px-3 text-sm sm:text-base flex flex-col sm:flex-row items-center justify-center text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white hover:bg-gray-200"
       >
         <Icon size={24} name="iconoir:fire-flame" class="text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white" />
-        <span class="ml-1 font-medium"> Projects </span>
+        <span class="sm:ml-1 font-medium">Projects</span>
       </a>
       <a
         href="/cv"
-        class="flex flex-col sm:flex-row items-center text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
+        class="w-full sm:w-auto sm:px-3 text-sm sm:text-base flex flex-col sm:flex-row items-center justify-center text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white hover:bg-gray-200"
       >
         <Icon size={24} name="iconoir:page" class="text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-white" />
-        <span class="ml-1 font-medium"> CV </span>
+        <span class="sm:ml-1 font-medium">CV</span>
       </a>
     </div>
   </div>
